@@ -86,7 +86,7 @@
         },
         {
             "name": "DatepickerComponent",
-            "id": "component-DatepickerComponent-97d74fa22429e8073eef9ea4b8cf1be8418d6331acbf0b409c5394ee912a11433093cca969b56f3ffa6b98f82aec68cb631cd954f91621a9d712c8f9dd8821dd",
+            "id": "component-DatepickerComponent-12ebdff572d374dcdbfa9da017b4f5f33f09a33fd34793025716a00d1120723788cc78e408f45749075ed6914bf6e4ed08f3ae5a447d8c6bd66fc4d142b9fb12",
             "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -104,6 +104,15 @@
             ],
             "viewProviders": [],
             "inputsClass": [
+                {
+                    "name": "inputId",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
                 {
                     "name": "showPredefinedRanges",
                     "defaultValue": "true",
@@ -124,11 +133,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DatepickerComponent {\n  @Input() showPredefinedRanges = true;\n\n  constructor() { }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DatepickerComponent {\n  @Input() showPredefinedRanges = true;\n  @Input() inputId = '';\n\n  constructor() { }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "@import '@theme/styles/variables';\n\n.datepicker {\n  display: block;\n}\n\n::ng-deep .datepicker {\n  .p-inputtext {\n    min-width: 265px;\n  }\n\n  .p-calendar .p-datepicker {\n    top: 100% !important;\n    right: 0;\n    font-size: $font-size-sm;\n  }\n\n  .p-link, .p-component {\n    font-size: inherit;\n  }\n}\n",
                     "styleUrl": "./datepicker.component.scss"
                 }
             ],
@@ -139,9 +148,9 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 10
+                "line": 11
             },
-            "templateData": "<p-calendar class=\"datepicker\"></p-calendar>\n"
+            "templateData": "<p-calendar class=\"datepicker\" [inputId]=\"inputId\"></p-calendar>\n"
         }
     ],
     "modules": [
@@ -336,7 +345,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<DatepickerComponent>",
-                "defaultValue": "(args: DatepickerComponent) => ({\n  props: args,\n})"
+                "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default'}},\n})"
             }
         ],
         "functions": [],
@@ -383,7 +392,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<DatepickerComponent>",
-                    "defaultValue": "(args: DatepickerComponent) => ({\n  props: args,\n})"
+                    "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default'}},\n})"
                 }
             ],
             "src/environments/environment.prod.ts": [
@@ -439,7 +448,7 @@
                 "linktype": "component",
                 "name": "DatepickerComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {

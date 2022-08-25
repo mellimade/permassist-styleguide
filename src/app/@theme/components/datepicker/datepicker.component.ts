@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class DatepickerComponent {
   @Input() showPredefinedRanges = true;
+  @Input() inputId = '';
 
   constructor() { }
 }

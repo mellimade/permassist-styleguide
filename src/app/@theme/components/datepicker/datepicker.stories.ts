@@ -1,10 +1,6 @@
 // also exported from '@storybook/angular' if you can deal with breaking changes in 6.1
-import { CommonModule } from '@angular/common';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ThemeModule } from '../../theme.module';
-
 import { Story, Meta } from '@storybook/angular/types-6-0';
-import { moduleMetadata } from '@storybook/angular';
+import { componentWrapperDecorator } from '@storybook/angular';
 
 import { DatepickerComponent } from './datepicker.component';
 
@@ -13,15 +9,14 @@ export default {
   title: 'Components/Datepicker',
   component: DatepickerComponent,
   decorators: [
-    moduleMetadata({
-      imports: [CommonModule, ThemeModule, BrowserAnimationsModule],
-    }),
+    // With template
+    componentWrapperDecorator(story => `<label for="default" class="form-label">Label</label>${story}`),
   ],
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
 const Template: Story<DatepickerComponent> = (args: DatepickerComponent) => ({
-  props: args,
+  props: {...args, ...{ inputId: 'default'}},
 });
 
 export const Default = Template.bind({});

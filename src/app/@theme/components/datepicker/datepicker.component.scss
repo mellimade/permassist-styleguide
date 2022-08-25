@@ -1,0 +1,64 @@
+@import '@theme/styles/variables';
+
+.datepicker {
+  display: block;
+}
+
+::ng-deep .datepicker {
+  .p-inputtext {
+    min-width: 265px;
+
+    &:focus {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .p-inputtext:focus + .p-datepicker {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top: 1px solid $primary-600;
+  }
+
+  .p-calendar .p-datepicker {
+    top: 100% !important;
+    right: 0;
+    font-size: $font-size-sm;
+    padding-top: 0;
+  }
+
+  .p-datepicker .p-datepicker-header {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .p-link, .p-component, .p-datepicker table {
+    font-size: inherit;
+  }
+
+  .p-datepicker table th {
+    text-align: center;
+    font-weight: $font-weight-semibold;
+  }
+
+  .p-datepicker table th,
+  .p-datepicker table td {
+    padding-top: .25em;
+    padding-bottom: .25em;
+
+    > span {
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  .p-datepicker table td.p-datepicker-today > span {
+    background-color: $primary-200;
+  }
+
+  .p-datepicker table td > span.p-highlight {
+    color: $white;
+    background-color: $primary-600;
+    font-weight: $font-weight-medium;
+  }
+}
