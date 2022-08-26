@@ -404,7 +404,7 @@
                     }
                 }
             },
-            "templateData": "<p-calendar #calendar class=\"datepicker -{{ selectionMode }}\" [class.-showing]=\"showing$ | async\" [inputId]=\"inputId\" [selectionMode]=\"selectionMode\" (onShow)=\"onOpen()\" (onClose)=\"onClose()\" [numberOfMonths]=\"numberOfMonths$ | async\" panelStyleClass=\"{{ showPredefinedRanges ? '-has-ranges' : '' }}\"  dateFormat=\"dd/mm/yy\">\n  <ng-template pTemplate=\"header\">\n    <p-menu #predefinedRangesMenu class=\"datepicker__predefined-ranges\" *ngIf=\"showPredefinedRanges && selectionMode === 'range'\" [model]=\"predefinedRanges\"></p-menu>\n  </ng-template>\n\n  <ng-template pTemplate=\"footer\">\n    <div class=\"datepicker__actions\">\n      <button type=\"button\" (click)=\"calendar.toggle()\" class=\"btn btn-primary btn-sm order-2 datepicker__btn\">Apply</button>\n      <button type=\"button\" (click)=\"calendar.toggle()\" class=\"btn btn-link btn-sm order-1 datepicker__btn\">Cancel</button>\n    </div>\n  </ng-template>\n</p-calendar>\n"
+            "templateData": "<p-calendar #calendar class=\"datepicker -{{ selectionMode }}\" [class.-showing]=\"showing$ | async\" [inputId]=\"inputId\" [selectionMode]=\"selectionMode\" (onShow)=\"onOpen()\" (onClose)=\"onClose()\" [numberOfMonths]=\"numberOfMonths$ | async\" panelStyleClass=\"{{ showPredefinedRanges ? '-has-ranges' : '' }}\"  dateFormat=\"dd/mm/yy\">\n  <ng-template pTemplate=\"header\">\n    <p-menu #predefinedRangesMenu class=\"datepicker__predefined-ranges\" *ngIf=\"showPredefinedRanges && selectionMode === 'range'\" [model]=\"predefinedRanges\"></p-menu>\n  </ng-template>\n\n  <ng-template pTemplate=\"footer\">\n    <div class=\"datepicker__actions\">\n      <button type=\"button\" (click)=\"calendar.toggle()\" class=\"btn btn-primary btn-sm datepicker__btn\">Close</button>\n    </div>\n  </ng-template>\n</p-calendar>\n"
         }
     ],
     "modules": [
@@ -576,21 +576,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: false\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.prod.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
             },
             {
                 "name": "Range",
@@ -1151,18 +1151,6 @@
                     "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default'}},\n})"
                 }
             ],
-            "src/environments/environment.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: false\n}"
-                }
-            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -1173,6 +1161,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
                 }
             ]
         },
