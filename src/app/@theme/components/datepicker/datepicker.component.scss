@@ -22,7 +22,7 @@
   }
 
   .p-calendar .p-datepicker {
-    top: 100% !important;
+    top: calc(100% - 1px) !important;
     right: 0;
     font-size: $font-size-sm;
     padding-top: 0;
@@ -109,17 +109,7 @@
     .p-inputtext + .p-datepicker {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-top: 1px solid $primary-600;
-
-      &.p-datepicker-multiple-month:before {
-        content: '';
-        height: 2px;
-        background-color: $primary-600;
-        position: absolute;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-      }
+      border-top: 2px solid $primary-600;
     }
   }
 
