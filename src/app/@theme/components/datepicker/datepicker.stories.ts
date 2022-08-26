@@ -20,6 +20,12 @@ export default {
   parameters: {
     controls: { include: ['showPredefinedRanges', 'selectionMode'] }
   },
+  argTypes: {
+    selectionMode: {
+      options: ['single', 'range'],
+      control: { type: 'radio' },
+    },
+  },
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
@@ -28,6 +34,9 @@ const Template: Story<DatepickerComponent> = (args: DatepickerComponent) => ({
 });
 
 export const Default = Template.bind({});
+Default.args = {
+  selectionMode: 'single'
+};
 
 export const Range = Template.bind({});
 Range.args = {
