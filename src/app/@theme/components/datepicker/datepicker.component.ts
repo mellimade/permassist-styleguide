@@ -73,7 +73,6 @@ export class DatepickerComponent {
     { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },
     { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },
     { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },
-    { label: 'Custom range', command: e => this.setRange(e.item, e.event) },
   ];
 
   @ViewChild('calendar') $calendar!: Calendar;

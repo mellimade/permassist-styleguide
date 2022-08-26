@@ -86,7 +86,7 @@
         },
         {
             "name": "DatepickerComponent",
-            "id": "component-DatepickerComponent-2a665837a22e123e9e0e87ab0f11917f7967e27afcef645a9bbed06ea9b12db1680e7111161677a0de48e959a664d27d8b2551aef449414c5393600331d69f4f",
+            "id": "component-DatepickerComponent-7191ab52df65bf16f0ac3b79defa29b91d44464f46965955d5ca2f0347f505d53fc006c728bc7cb60e3ef5b614650180e2de97324f47d935b5d4bf36ed29afca",
             "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -115,7 +115,7 @@
                 },
                 {
                     "name": "predefinedRanges",
-                    "defaultValue": "[\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: 'Custom range', command: e => this.setRange(e.item, e.event) },\n  ]",
+                    "defaultValue": "[\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n  ]",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 69,
@@ -149,7 +149,7 @@
                     "type": "Calendar",
                     "optional": false,
                     "description": "",
-                    "line": 79,
+                    "line": 78,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -164,7 +164,7 @@
                     "type": "Menu",
                     "optional": false,
                     "description": "",
-                    "line": 80,
+                    "line": 79,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -180,7 +180,7 @@
                     "type": "Observable<number>",
                     "optional": false,
                     "description": "",
-                    "line": 88
+                    "line": 87
                 },
                 {
                     "name": "selectionMode$",
@@ -190,7 +190,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 86
+                    "line": 85
                 },
                 {
                     "name": "selectionMode$$",
@@ -200,7 +200,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 85,
+                    "line": 84,
                     "modifierKind": [
                         121,
                         144
@@ -214,7 +214,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 83
+                    "line": 82
                 },
                 {
                     "name": "showing$$",
@@ -224,7 +224,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 82,
+                    "line": 81,
                     "modifierKind": [
                         121,
                         144
@@ -238,7 +238,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 158,
+                    "line": 157,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -248,7 +248,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 92,
+                    "line": 91,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -272,7 +272,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 162,
+                    "line": 161,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -310,7 +310,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 187,
+                    "line": 186,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -334,7 +334,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 205,
+                    "line": 204,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -349,7 +349,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';\nimport { MenuItem } from 'primeng/api';\nimport { Calendar } from 'primeng/calendar';\nimport { Menu } from 'primeng/menu';\nimport { BehaviorSubject, map, Observable } from 'rxjs';\nimport { daysAgo, monthsAgo } from 'src/app/@helpers/dates';\nimport { getParentsOf, waitUntilExistsFrom } from 'src/app/@helpers/utilities';\n\nfunction multiplyDayDependingOnGroup(day: number, $day: HTMLElement) {\n  const $group = getParentsOf($day, '.p-datepicker-group')?.[0];\n\n  if (!$group) return day;\n\n  return day + (32 * Array.from($group.parentNode.children).indexOf($group));\n}\n\nexport const DATEPICKER_RANGES = {\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}\n\n@Component({\n  selector: 'app-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DatepickerComponent {\n  @Input() showPredefinedRanges = true;\n  @Input() inputId = '';\n\n  @Input()\n  set selectionMode(selectionMode: string) {\n    this.selectionMode$$.next(selectionMode);\n  }\n\n  get selectionMode(): string {\n    return this.selectionMode$$.value;\n  }\n\n  @Input() predefinedRanges: MenuItem[] = [\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: 'Custom range', command: e => this.setRange(e.item, e.event) },\n  ];\n\n  @ViewChild('calendar') $calendar!: Calendar;\n  @ViewChild('predefinedRangesMenu') $predefinedRangesMenu!: Menu;\n\n  private readonly showing$$ = new BehaviorSubject(false);\n  showing$ = this.showing$$.asObservable();\n\n  private readonly selectionMode$$ = new BehaviorSubject('single');\n  selectionMode$ = this.selectionMode$$.asObservable();\n\n  numberOfMonths$: Observable<number> = this.selectionMode$.pipe(map(x => x === 'range' ? 2 : 1));\n\n  constructor() { }\n\n  onOpen() {\n    this.showing$$.next(true);\n\n    if (this.selectionMode === 'range') {\n      waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {\n        let $showHoverFor: HTMLElement;\n        let showHoverFor: number;\n\n        this.updateActiveMenuItemOnOpen();\n\n        $contentViewChild.querySelectorAll('table td > span').forEach(($date: HTMLElement) => {\n          $date.addEventListener('click', () => {\n            const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)');\n\n            if ($highlighted?.length === 1) {\n              $showHoverFor = $highlighted[0].parentNode as HTMLElement;\n              showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);\n            } else {\n              showHoverFor = 0;\n              $showHoverFor = null;\n              $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {\n                $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n              });\n            }\n          });\n\n          $date.addEventListener('mouseover', e => {\n            if (showHoverFor) {\n              const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));\n\n              if (current > showHoverFor) {\n                $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: HTMLElement) => {\n                  const day = multiplyDayDependingOnGroup(Number($x.textContent), $x);\n\n                  if (current > showHoverFor && day < current && day > showHoverFor) {\n                    $x.classList.add('-highlighted');\n                  } else {\n                    $x.classList.remove('-highlighted');\n                  }\n\n                  if (day === current) {\n                    $x.classList.add('-highlighted-end');\n                  } else {\n                    $x.classList.remove('-highlighted-end');\n                  }\n\n                  if (day === showHoverFor) {\n                    $x.classList.add('-highlighted-start');\n                  } else {\n                    $x.classList.remove('-highlighted-start');\n                  }\n                });\n              }\n            }\n          });\n        });\n\n        $contentViewChild.addEventListener('mouseout', () => {\n          $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {\n            $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n          });\n        });\n      });\n    }\n  }\n\n  onClose() {\n    this.showing$$.next(false);\n  }\n\n  setRange(item: MenuItem, e?: Event) {\n    const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n    if (range) {\n      if (this.selectionMode === 'range') {\n        this.$calendar.updateModel([]);\n\n        range.range.forEach(date => {\n          this.$calendar.onDateSelect(e, {\n            year: date.getFullYear(),\n            month: date.getMonth(),\n            day: date.getUTCDate(),\n            selectable: true\n          });\n        });\n\n        this.$calendar.updateUI();\n      } else {\n        this.$calendar.updateModel(range.single);\n      }\n    }\n\n    this.updateActiveMenuItem(item.label);\n  }\n\n  private updateActiveMenuItem(label: string) {\n    const $range = this.$predefinedRangesMenu?.el?.nativeElement?.querySelectorAll('.p-menuitem-link') || [];\n    let foundMatch = false;\n\n    $range.forEach(($link: HTMLElement) => {\n      if ($link.textContent === label) {\n        $link.classList.add('-active');\n        foundMatch = true;\n      } else {\n        $link.classList.remove('-active');\n      }\n    });\n\n    if (!foundMatch && $range.length) {\n      ($range[$range.length - 1] as HTMLElement).classList.add('-active');\n    }\n  }\n\n  private updateActiveMenuItemOnOpen() {\n    this.predefinedRanges.forEach(item => {\n      const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n      if (this.selectionMode === 'range') {\n        if (range && this.$calendar.value?.[0] === range.range[0] && this.$calendar.value?.[1] === range.range[1]) {\n          this.updateActiveMenuItem(item.label);\n        }\n      } else {\n        if (range && this.$calendar.value === range.single) {\n          this.updateActiveMenuItem(item.label);\n        }\n      }\n    });\n  }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';\nimport { MenuItem } from 'primeng/api';\nimport { Calendar } from 'primeng/calendar';\nimport { Menu } from 'primeng/menu';\nimport { BehaviorSubject, map, Observable } from 'rxjs';\nimport { daysAgo, monthsAgo } from 'src/app/@helpers/dates';\nimport { getParentsOf, waitUntilExistsFrom } from 'src/app/@helpers/utilities';\n\nfunction multiplyDayDependingOnGroup(day: number, $day: HTMLElement) {\n  const $group = getParentsOf($day, '.p-datepicker-group')?.[0];\n\n  if (!$group) return day;\n\n  return day + (32 * Array.from($group.parentNode.children).indexOf($group));\n}\n\nexport const DATEPICKER_RANGES = {\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}\n\n@Component({\n  selector: 'app-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DatepickerComponent {\n  @Input() showPredefinedRanges = true;\n  @Input() inputId = '';\n\n  @Input()\n  set selectionMode(selectionMode: string) {\n    this.selectionMode$$.next(selectionMode);\n  }\n\n  get selectionMode(): string {\n    return this.selectionMode$$.value;\n  }\n\n  @Input() predefinedRanges: MenuItem[] = [\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n  ];\n\n  @ViewChild('calendar') $calendar!: Calendar;\n  @ViewChild('predefinedRangesMenu') $predefinedRangesMenu!: Menu;\n\n  private readonly showing$$ = new BehaviorSubject(false);\n  showing$ = this.showing$$.asObservable();\n\n  private readonly selectionMode$$ = new BehaviorSubject('single');\n  selectionMode$ = this.selectionMode$$.asObservable();\n\n  numberOfMonths$: Observable<number> = this.selectionMode$.pipe(map(x => x === 'range' ? 2 : 1));\n\n  constructor() { }\n\n  onOpen() {\n    this.showing$$.next(true);\n\n    if (this.selectionMode === 'range') {\n      waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {\n        let $showHoverFor: HTMLElement;\n        let showHoverFor: number;\n\n        this.updateActiveMenuItemOnOpen();\n\n        $contentViewChild.querySelectorAll('table td > span').forEach(($date: HTMLElement) => {\n          $date.addEventListener('click', () => {\n            const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)');\n\n            if ($highlighted?.length === 1) {\n              $showHoverFor = $highlighted[0].parentNode as HTMLElement;\n              showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);\n            } else {\n              showHoverFor = 0;\n              $showHoverFor = null;\n              $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {\n                $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n              });\n            }\n          });\n\n          $date.addEventListener('mouseover', e => {\n            if (showHoverFor) {\n              const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));\n\n              if (current > showHoverFor) {\n                $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: HTMLElement) => {\n                  const day = multiplyDayDependingOnGroup(Number($x.textContent), $x);\n\n                  if (current > showHoverFor && day < current && day > showHoverFor) {\n                    $x.classList.add('-highlighted');\n                  } else {\n                    $x.classList.remove('-highlighted');\n                  }\n\n                  if (day === current) {\n                    $x.classList.add('-highlighted-end');\n                  } else {\n                    $x.classList.remove('-highlighted-end');\n                  }\n\n                  if (day === showHoverFor) {\n                    $x.classList.add('-highlighted-start');\n                  } else {\n                    $x.classList.remove('-highlighted-start');\n                  }\n                });\n              }\n            }\n          });\n        });\n\n        $contentViewChild.addEventListener('mouseout', () => {\n          $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {\n            $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n          });\n        });\n      });\n    }\n  }\n\n  onClose() {\n    this.showing$$.next(false);\n  }\n\n  setRange(item: MenuItem, e?: Event) {\n    const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n    if (range) {\n      if (this.selectionMode === 'range') {\n        this.$calendar.updateModel([]);\n\n        range.range.forEach(date => {\n          this.$calendar.onDateSelect(e, {\n            year: date.getFullYear(),\n            month: date.getMonth(),\n            day: date.getUTCDate(),\n            selectable: true\n          });\n        });\n\n        this.$calendar.updateUI();\n      } else {\n        this.$calendar.updateModel(range.single);\n      }\n    }\n\n    this.updateActiveMenuItem(item.label);\n  }\n\n  private updateActiveMenuItem(label: string) {\n    const $range = this.$predefinedRangesMenu?.el?.nativeElement?.querySelectorAll('.p-menuitem-link') || [];\n    let foundMatch = false;\n\n    $range.forEach(($link: HTMLElement) => {\n      if ($link.textContent === label) {\n        $link.classList.add('-active');\n        foundMatch = true;\n      } else {\n        $link.classList.remove('-active');\n      }\n    });\n\n    if (!foundMatch && $range.length) {\n      ($range[$range.length - 1] as HTMLElement).classList.add('-active');\n    }\n  }\n\n  private updateActiveMenuItemOnOpen() {\n    this.predefinedRanges.forEach(item => {\n      const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n      if (this.selectionMode === 'range') {\n        if (range && this.$calendar.value?.[0] === range.range[0] && this.$calendar.value?.[1] === range.range[1]) {\n          this.updateActiveMenuItem(item.label);\n        }\n      } else {\n        if (range && this.$calendar.value === range.single) {\n          this.updateActiveMenuItem(item.label);\n        }\n      }\n    });\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -364,7 +364,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 88
+                "line": 87
             },
             "accessors": {
                 "selectionMode": {
@@ -576,21 +576,21 @@
                 "name": "environment",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/environments/environment.prod.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "object",
-                "defaultValue": "{\n  production: true\n}"
-            },
-            {
-                "name": "environment",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "src/environments/environment.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "object",
                 "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
             },
             {
                 "name": "Range",
@@ -1151,18 +1151,6 @@
                     "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default'}},\n})"
                 }
             ],
-            "src/environments/environment.prod.ts": [
-                {
-                    "name": "environment",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/environments/environment.prod.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "object",
-                    "defaultValue": "{\n  production: true\n}"
-                }
-            ],
             "src/environments/environment.ts": [
                 {
                     "name": "environment",
@@ -1173,6 +1161,18 @@
                     "deprecationMessage": "",
                     "type": "object",
                     "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
                 }
             ]
         },
