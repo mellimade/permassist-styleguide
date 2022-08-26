@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { CalendarModule } from 'primeng/calendar';
+import { MenuModule } from 'primeng/menu';
 
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 
@@ -11,11 +12,13 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
   ],
   imports: [
     CommonModule,
-    CalendarModule
+    CalendarModule,
+    MenuModule
   ],
   exports: [
     DatepickerComponent,
-    CalendarModule
+    CalendarModule,
+    MenuModule
   ]
 })
 export class ThemeModule { }

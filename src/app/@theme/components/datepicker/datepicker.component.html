@@ -1,1 +1,12 @@
-<p-calendar class="datepicker" [inputId]="inputId"></p-calendar>
+<p-calendar #calendar class="datepicker -{{ selectionMode }}" [class.-showing]="showing$ | async" [inputId]="inputId" [selectionMode]="selectionMode" (onShow)="onOpen()" (onClose)="onClose()" [numberOfMonths]="numberOfMonths$ | async" panelStyleClass="{{ showPredefinedRanges ? '-has-ranges' : '' }}"  dateFormat="dd/mm/yy">
+  <ng-template pTemplate="header">
+    <p-menu #predefinedRangesMenu class="datepicker__predefined-ranges" *ngIf="showPredefinedRanges && selectionMode === 'range'" [model]="predefinedRanges"></p-menu>
+  </ng-template>
+
+  <ng-template pTemplate="footer">
+    <div class="datepicker__actions">
+      <button type="button" (click)="calendar.toggle()" class="btn btn-primary btn-sm order-2 datepicker__btn">Apply</button>
+      <button type="button" (click)="calendar.toggle()" class="btn btn-link btn-sm order-1 datepicker__btn">Cancel</button>
+    </div>
+  </ng-template>
+</p-calendar>

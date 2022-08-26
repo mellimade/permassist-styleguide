@@ -86,7 +86,7 @@
         },
         {
             "name": "DatepickerComponent",
-            "id": "component-DatepickerComponent-12ebdff572d374dcdbfa9da017b4f5f33f09a33fd34793025716a00d1120723788cc78e408f45749075ed6914bf6e4ed08f3ae5a447d8c6bd66fc4d142b9fb12",
+            "id": "component-DatepickerComponent-2a665837a22e123e9e0e87ab0f11917f7967e27afcef645a9bbed06ea9b12db1680e7111161677a0de48e959a664d27d8b2551aef449414c5393600331d69f4f",
             "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -109,7 +109,24 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 58,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "predefinedRanges",
+                    "defaultValue": "[\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: 'Custom range', command: e => this.setRange(e.item, e.event) },\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 69,
+                    "type": "MenuItem[]",
+                    "decorators": []
+                },
+                {
+                    "name": "selectionMode",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 61,
                     "type": "string",
                     "decorators": []
                 },
@@ -118,14 +135,213 @@
                     "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 57,
                     "type": "boolean",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "$calendar",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Calendar",
+                    "optional": false,
+                    "description": "",
+                    "line": 79,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'calendar'"
+                        }
+                    ]
+                },
+                {
+                    "name": "$predefinedRangesMenu",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Menu",
+                    "optional": false,
+                    "description": "",
+                    "line": 80,
+                    "decorators": [
+                        {
+                            "name": "ViewChild",
+                            "stringifiedArguments": "'predefinedRangesMenu'"
+                        }
+                    ]
+                },
+                {
+                    "name": "numberOfMonths$",
+                    "defaultValue": "this.selectionMode$.pipe(map(x => x === 'range' ? 2 : 1))",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Observable<number>",
+                    "optional": false,
+                    "description": "",
+                    "line": 88
+                },
+                {
+                    "name": "selectionMode$",
+                    "defaultValue": "this.selectionMode$$.asObservable()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 86
+                },
+                {
+                    "name": "selectionMode$$",
+                    "defaultValue": "new BehaviorSubject('single')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 85,
+                    "modifierKind": [
+                        121,
+                        144
+                    ]
+                },
+                {
+                    "name": "showing$",
+                    "defaultValue": "this.showing$$.asObservable()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 83
+                },
+                {
+                    "name": "showing$$",
+                    "defaultValue": "new BehaviorSubject(false)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 82,
+                    "modifierKind": [
+                        121,
+                        144
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onClose",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 158,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onOpen",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 92,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "setRange",
+                    "args": [
+                        {
+                            "name": "item",
+                            "type": "MenuItem",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "e",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "optional": true
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 162,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "item",
+                            "type": "MenuItem",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "e",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "optional": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateActiveMenuItem",
+                    "args": [
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 187,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "label",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "updateActiveMenuItemOnOpen",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 205,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        121
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -133,11 +349,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DatepickerComponent {\n  @Input() showPredefinedRanges = true;\n  @Input() inputId = '';\n\n  constructor() { }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';\nimport { MenuItem } from 'primeng/api';\nimport { Calendar } from 'primeng/calendar';\nimport { Menu } from 'primeng/menu';\nimport { BehaviorSubject, map, Observable } from 'rxjs';\nimport { daysAgo, monthsAgo } from 'src/app/@helpers/dates';\nimport { getParentsOf, waitUntilExistsFrom } from 'src/app/@helpers/utilities';\n\nfunction multiplyDayDependingOnGroup(day: number, $day: HTMLElement) {\n  const $group = getParentsOf($day, '.p-datepicker-group')?.[0];\n\n  if (!$group) return day;\n\n  return day + (32 * Array.from($group.parentNode.children).indexOf($group));\n}\n\nexport const DATEPICKER_RANGES = {\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}\n\n@Component({\n  selector: 'app-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DatepickerComponent {\n  @Input() showPredefinedRanges = true;\n  @Input() inputId = '';\n\n  @Input()\n  set selectionMode(selectionMode: string) {\n    this.selectionMode$$.next(selectionMode);\n  }\n\n  get selectionMode(): string {\n    return this.selectionMode$$.value;\n  }\n\n  @Input() predefinedRanges: MenuItem[] = [\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: 'Custom range', command: e => this.setRange(e.item, e.event) },\n  ];\n\n  @ViewChild('calendar') $calendar!: Calendar;\n  @ViewChild('predefinedRangesMenu') $predefinedRangesMenu!: Menu;\n\n  private readonly showing$$ = new BehaviorSubject(false);\n  showing$ = this.showing$$.asObservable();\n\n  private readonly selectionMode$$ = new BehaviorSubject('single');\n  selectionMode$ = this.selectionMode$$.asObservable();\n\n  numberOfMonths$: Observable<number> = this.selectionMode$.pipe(map(x => x === 'range' ? 2 : 1));\n\n  constructor() { }\n\n  onOpen() {\n    this.showing$$.next(true);\n\n    if (this.selectionMode === 'range') {\n      waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {\n        let $showHoverFor: HTMLElement;\n        let showHoverFor: number;\n\n        this.updateActiveMenuItemOnOpen();\n\n        $contentViewChild.querySelectorAll('table td > span').forEach(($date: HTMLElement) => {\n          $date.addEventListener('click', () => {\n            const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)');\n\n            if ($highlighted?.length === 1) {\n              $showHoverFor = $highlighted[0].parentNode as HTMLElement;\n              showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);\n            } else {\n              showHoverFor = 0;\n              $showHoverFor = null;\n              $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {\n                $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n              });\n            }\n          });\n\n          $date.addEventListener('mouseover', e => {\n            if (showHoverFor) {\n              const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));\n\n              if (current > showHoverFor) {\n                $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: HTMLElement) => {\n                  const day = multiplyDayDependingOnGroup(Number($x.textContent), $x);\n\n                  if (current > showHoverFor && day < current && day > showHoverFor) {\n                    $x.classList.add('-highlighted');\n                  } else {\n                    $x.classList.remove('-highlighted');\n                  }\n\n                  if (day === current) {\n                    $x.classList.add('-highlighted-end');\n                  } else {\n                    $x.classList.remove('-highlighted-end');\n                  }\n\n                  if (day === showHoverFor) {\n                    $x.classList.add('-highlighted-start');\n                  } else {\n                    $x.classList.remove('-highlighted-start');\n                  }\n                });\n              }\n            }\n          });\n        });\n\n        $contentViewChild.addEventListener('mouseout', () => {\n          $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {\n            $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n          });\n        });\n      });\n    }\n  }\n\n  onClose() {\n    this.showing$$.next(false);\n  }\n\n  setRange(item: MenuItem, e?: Event) {\n    const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n    if (range) {\n      if (this.selectionMode === 'range') {\n        this.$calendar.updateModel([]);\n\n        range.range.forEach(date => {\n          this.$calendar.onDateSelect(e, {\n            year: date.getFullYear(),\n            month: date.getMonth(),\n            day: date.getUTCDate(),\n            selectable: true\n          });\n        });\n\n        this.$calendar.updateUI();\n      } else {\n        this.$calendar.updateModel(range.single);\n      }\n    }\n\n    this.updateActiveMenuItem(item.label);\n  }\n\n  private updateActiveMenuItem(label: string) {\n    const $range = this.$predefinedRangesMenu?.el?.nativeElement?.querySelectorAll('.p-menuitem-link') || [];\n    let foundMatch = false;\n\n    $range.forEach(($link: HTMLElement) => {\n      if ($link.textContent === label) {\n        $link.classList.add('-active');\n        foundMatch = true;\n      } else {\n        $link.classList.remove('-active');\n      }\n    });\n\n    if (!foundMatch && $range.length) {\n      ($range[$range.length - 1] as HTMLElement).classList.add('-active');\n    }\n  }\n\n  private updateActiveMenuItemOnOpen() {\n    this.predefinedRanges.forEach(item => {\n      const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n      if (this.selectionMode === 'range') {\n        if (range && this.$calendar.value?.[0] === range.range[0] && this.$calendar.value?.[1] === range.range[1]) {\n          this.updateActiveMenuItem(item.label);\n        }\n      } else {\n        if (range && this.$calendar.value === range.single) {\n          this.updateActiveMenuItem(item.label);\n        }\n      }\n    });\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import '@theme/styles/variables';\n\n.datepicker {\n  display: block;\n}\n\n::ng-deep .datepicker {\n  .p-inputtext {\n    min-width: 265px;\n  }\n\n  .p-calendar .p-datepicker {\n    top: 100% !important;\n    right: 0;\n    font-size: $font-size-sm;\n  }\n\n  .p-link, .p-component {\n    font-size: inherit;\n  }\n}\n",
+                    "data": "@import '@theme/styles/variables';\n\n.datepicker {\n  display: block;\n}\n\n::ng-deep .datepicker {\n  .p-inputtext {\n    min-width: 265px;\n  }\n\n  .p-calendar:after {\n    content: $icon-calendar;\n    font-family: $font-family-icons;\n    position: absolute;\n    top: .5em;\n    right: .5em;\n    font-size: 1.3em;\n    color: $primary-500;\n    cursor: pointer;\n    pointer-events: none;\n  }\n\n  .p-calendar .p-datepicker {\n    top: 100% !important;\n    right: 0;\n    font-size: $font-size-sm;\n    padding-top: 0;\n\n    &.p-datepicker-multiple-month {\n      right: auto;\n    }\n  }\n\n  .p-datepicker .p-datepicker-header {\n    border-bottom: none;\n    padding-bottom: 0;\n    padding-top: 0;\n    margin-bottom: -0.75em;\n  }\n\n  .p-link, .p-component, .p-datepicker table {\n    font-size: inherit;\n  }\n\n  .p-datepicker {\n    padding: 0;\n  }\n\n  .p-datepicker table th {\n    text-align: center;\n    font-weight: $font-weight-semibold;\n  }\n\n  .p-datepicker table th,\n  .p-datepicker table td {\n    padding: .25em .1em;\n\n    > span {\n      width: 2em;\n      height: 2em;\n    }\n  }\n\n  .p-datepicker table td.p-datepicker-today > span {\n    background-color: $primary-200;\n  }\n\n  .p-datepicker table td > span.p-highlight,\n  .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {\n    color: $white;\n    background-color: $primary-600;\n    font-weight: $font-weight-medium;\n  }\n\n  .p-datepicker table td.-highlighted,\n  .p-datepicker table td.-highlighted-start,\n  .p-datepicker table td.-highlighted-end {\n    position: relative;\n\n    &:before {\n      content: '';\n      position: absolute;\n      top: .25em;\n      left: 0;\n      right: 0;\n      bottom: .25em;\n      background-color: $primary-250;\n      z-index: -1;\n    }\n  }\n\n  .p-datepicker table td.-highlighted-start:before {\n    left: 50%;\n  }\n\n  .p-datepicker table td.-highlighted-end:before {\n    right: 50%;\n  }\n\n  &.-showing {\n    .p-inputtext {\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n      border-color: $primary-600;\n      box-shadow: 0 0 0 1px $primary-600;\n    }\n\n    .p-inputtext + .p-datepicker {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n      border-top: 1px solid $primary-600;\n\n      &.p-datepicker-multiple-month:before {\n        content: '';\n        height: 2px;\n        background-color: $primary-600;\n        position: absolute;\n        bottom: 100%;\n        left: 0;\n        right: 0;\n      }\n    }\n  }\n\n  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {\n    margin-right: 0;\n  }\n\n  .p-datepicker .p-datepicker-header .p-datepicker-prev,\n  .p-datepicker .p-datepicker-header .p-datepicker-next {\n    width: 1.5em;\n    height: 1.5em;\n  }\n\n  .p-datepicker.-has-ranges.p-datepicker-multiple-month {\n    display: inline-grid;\n    grid-template-columns: 1fr 1fr;\n    max-width: 100vw;\n    overflow-x: auto;\n\n    .p-datepicker-group {\n      padding-right: .5em;\n    }\n  }\n}\n\n::ng-deep .datepicker__predefined-ranges {\n  .p-menu {\n    border: none;\n    border-radius: 0;\n    border-right: 1px solid $gray-300;\n    background-color: $gray-100;\n    font-size: $font-size-sm;\n    width: auto;\n    min-width: 150px;\n    margin-right: .25em;\n    height: 100%;\n    padding-top: .5em;\n\n    .p-menuitem-link {\n      padding: 0.7em 1em;\n      padding-right: 2em;\n      color: $primary-600;\n      font-weight: $font-weight-medium;\n\n      .p-menuitem-text {\n        color: inherit;\n      }\n\n      &.-active {\n        background-color: $primary-250;\n      }\n    }\n  }\n}\n\n.datepicker__actions {\n  grid-column: span 3;\n  display: flex;\n  align-items: center;\n  justify-content: end;\n  padding: 1em;\n  border-top: 1px solid $gray-300;\n}\n\n.datepicker__btn {\n  margin-left: .25em;\n  font-weight: $font-weight-medium;\n\n  &.btn-link {\n    text-decoration: none;\n\n    &:hover {\n      text-decoration: underline;\n    }\n  }\n}\n",
                     "styleUrl": "./datepicker.component.scss"
                 }
             ],
@@ -148,9 +364,47 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "args": [],
-                "line": 11
+                "line": 88
             },
-            "templateData": "<p-calendar class=\"datepicker\" [inputId]=\"inputId\"></p-calendar>\n"
+            "accessors": {
+                "selectionMode": {
+                    "name": "selectionMode",
+                    "setSignature": {
+                        "name": "selectionMode",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "selectionMode",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 61,
+                        "jsdoctags": [
+                            {
+                                "name": "selectionMode",
+                                "type": "string",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "selectionMode",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 65
+                    }
+                }
+            },
+            "templateData": "<p-calendar #calendar class=\"datepicker -{{ selectionMode }}\" [class.-showing]=\"showing$ | async\" [inputId]=\"inputId\" [selectionMode]=\"selectionMode\" (onShow)=\"onOpen()\" (onClose)=\"onClose()\" [numberOfMonths]=\"numberOfMonths$ | async\" panelStyleClass=\"{{ showPredefinedRanges ? '-has-ranges' : '' }}\"  dateFormat=\"dd/mm/yy\">\n  <ng-template pTemplate=\"header\">\n    <p-menu #predefinedRangesMenu class=\"datepicker__predefined-ranges\" *ngIf=\"showPredefinedRanges && selectionMode === 'range'\" [model]=\"predefinedRanges\"></p-menu>\n  </ng-template>\n\n  <ng-template pTemplate=\"footer\">\n    <div class=\"datepicker__actions\">\n      <button type=\"button\" (click)=\"calendar.toggle()\" class=\"btn btn-primary btn-sm order-2 datepicker__btn\">Apply</button>\n      <button type=\"button\" (click)=\"calendar.toggle()\" class=\"btn btn-link btn-sm order-1 datepicker__btn\">Cancel</button>\n    </div>\n  </ng-template>\n</p-calendar>\n"
         }
     ],
     "modules": [
@@ -243,13 +497,13 @@
         },
         {
             "name": "ThemeModule",
-            "id": "module-ThemeModule-0e48ec88fcbd1f92e105e17a9b0c5b3b0efbcc46d2fbaf8cf3d8466dbe9224de518990743803523a37a30570f3ddeec174f1e605f06c53738fe4f2bd80432a02",
+            "id": "module-ThemeModule-ad3a4183146b716c9596e016c92c5946c016c54e1633841face63cf2a04ab8c9bd9c0f7e41f9d70a3955da357173e24e08a82e7313aa053b1d627f3855f4243e",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/@theme/theme.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { CalendarModule } from 'primeng/calendar';\n\nimport { DatepickerComponent } from './components/datepicker/datepicker.component';\n\n@NgModule({\n  declarations: [\n    DatepickerComponent\n  ],\n  imports: [\n    CommonModule,\n    CalendarModule\n  ],\n  exports: [\n    DatepickerComponent,\n    CalendarModule\n  ]\n})\nexport class ThemeModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\n\nimport { CalendarModule } from 'primeng/calendar';\nimport { MenuModule } from 'primeng/menu';\n\nimport { DatepickerComponent } from './components/datepicker/datepicker.component';\n\n@NgModule({\n  declarations: [\n    DatepickerComponent\n  ],\n  imports: [\n    CommonModule,\n    CalendarModule,\n    MenuModule\n  ],\n  exports: [\n    DatepickerComponent,\n    CalendarModule,\n    MenuModule\n  ]\n})\nexport class ThemeModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -299,6 +553,16 @@
                 "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
             },
             {
+                "name": "DATEPICKER_RANGES",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -329,6 +593,16 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
+                "name": "Range",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/@theme/components/datepicker/datepicker.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "require",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -348,7 +622,467 @@
                 "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default'}},\n})"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "dayRange",
+                "file": "src/app/@helpers/dates.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "from",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    },
+                    {
+                        "name": "to",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "from",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "to",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "daysAgo",
+                "file": "src/app/@helpers/dates.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "days",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    },
+                    {
+                        "name": "date",
+                        "type": "Date",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "optional": true
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "days",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "date",
+                        "type": "Date",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "optional": true,
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "daysInMonthAgo",
+                "file": "src/app/@helpers/dates.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "months",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "months",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "getParentsOf",
+                "file": "src/app/@helpers/utilities.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "$element",
+                        "type": "HTMLElement",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "selector",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''"
+                    }
+                ],
+                "returnType": "HTMLElement[]",
+                "jsdoctags": [
+                    {
+                        "name": "$element",
+                        "type": "HTMLElement",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "selector",
+                        "type": "string",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "''",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "monthRange",
+                "file": "src/app/@helpers/dates.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "from",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    },
+                    {
+                        "name": "to",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "from",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "to",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "monthsAgo",
+                "file": "src/app/@helpers/dates.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "months",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    },
+                    {
+                        "name": "day",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "1"
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "months",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "day",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "1",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "multiplyDayDependingOnGroup",
+                "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "day",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "$day",
+                        "type": "HTMLElement",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "day",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "$day",
+                        "type": "HTMLElement",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "retry",
+                "file": "src/app/@helpers/utilities.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "fn",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "resolve",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "maxRetries",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "20"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "10"
+                    },
+                    {
+                        "name": "retries",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0"
+                    }
+                ],
+                "returnType": "void",
+                "jsdoctags": [
+                    {
+                        "name": "fn",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "resolve",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "maxRetries",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "20",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "10",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "retries",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "0",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "waitUntilExistsFrom",
+                "file": "src/app/@helpers/utilities.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "fn",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "maxRetries",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "20"
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "10"
+                    }
+                ],
+                "returnType": "Promise<T>",
+                "jsdoctags": [
+                    {
+                        "name": "fn",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "maxRetries",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "20",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "timeout",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "defaultValue": "10",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
@@ -373,9 +1107,31 @@
                     "type": "literal type"
                 }
             ],
+            "src/app/@theme/components/datepicker/datepicker.component.ts": [
+                {
+                    "name": "DATEPICKER_RANGES",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}"
+                }
+            ],
             "src/app/@theme/components/datepicker/datepicker.stories.ts": [
                 {
                     "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/@theme/components/datepicker/datepicker.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Range",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
                     "file": "src/app/@theme/components/datepicker/datepicker.stories.ts",
@@ -420,7 +1176,473 @@
                 }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "src/app/@helpers/dates.ts": [
+                {
+                    "name": "dayRange",
+                    "file": "src/app/@helpers/dates.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "from",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        },
+                        {
+                            "name": "to",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "from",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "to",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "daysAgo",
+                    "file": "src/app/@helpers/dates.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "days",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        },
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "optional": true
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "days",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "optional": true,
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "daysInMonthAgo",
+                    "file": "src/app/@helpers/dates.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "months",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "months",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "monthRange",
+                    "file": "src/app/@helpers/dates.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "from",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        },
+                        {
+                            "name": "to",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "from",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "to",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "monthsAgo",
+                    "file": "src/app/@helpers/dates.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "months",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        },
+                        {
+                            "name": "day",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "1"
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "months",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "day",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "1",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "src/app/@helpers/utilities.ts": [
+                {
+                    "name": "getParentsOf",
+                    "file": "src/app/@helpers/utilities.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "$element",
+                            "type": "HTMLElement",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "selector",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "''"
+                        }
+                    ],
+                    "returnType": "HTMLElement[]",
+                    "jsdoctags": [
+                        {
+                            "name": "$element",
+                            "type": "HTMLElement",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "selector",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "''",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "retry",
+                    "file": "src/app/@helpers/utilities.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "resolve",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "maxRetries",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "20"
+                        },
+                        {
+                            "name": "timeout",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "10"
+                        },
+                        {
+                            "name": "retries",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0"
+                        }
+                    ],
+                    "returnType": "void",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "resolve",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "maxRetries",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "20",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "timeout",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "10",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "retries",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "0",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "waitUntilExistsFrom",
+                    "file": "src/app/@helpers/utilities.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "fn",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "maxRetries",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "20"
+                        },
+                        {
+                            "name": "timeout",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "10"
+                        }
+                    ],
+                    "returnType": "Promise<T>",
+                    "jsdoctags": [
+                        {
+                            "name": "fn",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "maxRetries",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "20",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "timeout",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "defaultValue": "10",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "src/app/@theme/components/datepicker/datepicker.component.ts": [
+                {
+                    "name": "multiplyDayDependingOnGroup",
+                    "file": "src/app/@theme/components/datepicker/datepicker.component.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "day",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "$day",
+                            "type": "HTMLElement",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "day",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "$day",
+                            "type": "HTMLElement",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {}
     },
@@ -443,12 +1665,112 @@
         "status": "low",
         "files": [
             {
+                "filePath": "src/app/@helpers/dates.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "dayRange",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/dates.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "daysAgo",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/dates.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "daysInMonthAgo",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/dates.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "monthRange",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/dates.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "monthsAgo",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/utilities.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "getParentsOf",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/utilities.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "retry",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@helpers/utilities.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "waitUntilExistsFrom",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/@theme/components/datepicker/datepicker.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "DatepickerComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/18",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@theme/components/datepicker/datepicker.component.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "multiplyDayDependingOnGroup",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@theme/components/datepicker/datepicker.component.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "DATEPICKER_RANGES",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -457,6 +1779,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/@theme/components/datepicker/datepicker.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Range",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
