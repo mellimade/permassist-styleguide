@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MenuItem } from 'primeng/api';
 import { Calendar } from 'primeng/calendar';
@@ -57,8 +57,9 @@ export const DATEPICKER_RANGES = {
 })
 export class DatepickerComponent {
   @Input() showPredefinedRanges = true;
+  @Input() clearable = true;
   @Input() inputId = '';
-  @Input() formControl!: FormControl;
+  @Input() control!: FormControl;
 
   @Input()
   set selectionMode(selectionMode: string) {
@@ -78,6 +79,8 @@ export class DatepickerComponent {
     { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },
   ];
 
+  @Output() changed = new EventEmitter<unknown>();
+
   @ViewChild('calendar') $calendar!: Calendar;
   @ViewChild('predefinedRangesMenu') $predefinedRangesMenu!: Menu;
 
@@ -93,72 +96,28 @@ export class DatepickerComponent {
 
   onOpen() {
     this.showing$$.next(true);
+    this.addRangeInteractions();
+  }
 
-    if (this.selectionMode === 'range') {
-      waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {
-        let $showHoverFor: HTMLElement | null;
-        let showHoverFor: number;
+  onMonthChange() {
+    this.addRangeInteractions();
+  }
 
-        this.updateActiveMenuItemOnOpen();
-
-        $contentViewChild.querySelectorAll('table td > span').forEach(($date: HTMLElement) => {
-          $date.addEventListener('click', () => {
-            const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)');
-
-            if ($highlighted?.length === 1) {
-              $showHoverFor = $highlighted[0].parentNode as HTMLElement;
-              showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);
-            } else {
-              showHoverFor = 0;
-              $showHoverFor = null;
-              $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {
-                $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');
-              });
-            }
-          });
-
-          $date.addEventListener('mouseover', e => {
-            if (showHoverFor) {
-              const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));
-
-              if (current > showHoverFor) {
-                $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: HTMLElement) => {
-                  const day = multiplyDayDependingOnGroup(Number($x.textContent), $x);
-
-                  if (current > showHoverFor && day < current && day > showHoverFor) {
-                    $x.classList.add('-highlighted');
-                  } else {
-                    $x.classList.remove('-highlighted');
-                  }
-
-                  if (day === current) {
-                    $x.classList.add('-highlighted-end');
-                  } else {
-                    $x.classList.remove('-highlighted-end');
-                  }
-
-                  if (day === showHoverFor) {
-                    $x.classList.add('-highlighted-start');
-                  } else {
-                    $x.classList.remove('-highlighted-start');
-                  }
-                });
-              }
-            }
-          });
-        });
-
-        $contentViewChild.addEventListener('mouseout', () => {
-          $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {
-            $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');
-          });
-        });
-      });
-    }
+  onYearChange() {
+    this.addRangeInteractions();
   }
 
   onClose() {
     this.showing$$.next(false);
+  }
+
+  clear() {
+    this.$calendar?.updateModel(null);
+    this.control?.patchValue(null);
+
+    if (this.selectionMode === 'single') {
+      this.$calendar?.toggle();
+    }
   }
 
   setRange(item: MenuItem, e?: Event) {
@@ -184,6 +143,75 @@ export class DatepickerComponent {
     }
 
     this.updateActiveMenuItem(item.label);
+  }
+
+  asNumber(x: unknown) {
+    if (!x) return 0;
+    return x as number;
+  }
+
+  private addRangeInteractions() {
+    if (this.selectionMode !== 'range') return;
+
+    waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {
+      let $showHoverFor: HTMLElement | null;
+      let showHoverFor: number;
+
+      this.updateActiveMenuItemOnOpen();
+
+      $contentViewChild.querySelectorAll('table td > span').forEach(($date: HTMLElement) => {
+        $date.addEventListener('click', () => {
+          const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)');
+
+          if ($highlighted?.length === 1) {
+            $showHoverFor = $highlighted[0].parentNode as HTMLElement;
+            showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);
+          } else {
+            showHoverFor = 0;
+            $showHoverFor = null;
+            $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {
+              $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');
+            });
+          }
+        });
+
+        $date.addEventListener('mouseover', e => {
+          if (showHoverFor) {
+            const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));
+
+            if (current > showHoverFor) {
+              $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: HTMLElement) => {
+                const day = multiplyDayDependingOnGroup(Number($x.textContent), $x);
+
+                if (current > showHoverFor && day < current && day > showHoverFor) {
+                  $x.classList.add('-highlighted');
+                } else {
+                  $x.classList.remove('-highlighted');
+                }
+
+                if (day === current) {
+                  $x.classList.add('-highlighted-end');
+                } else {
+                  $x.classList.remove('-highlighted-end');
+                }
+
+                if (day === showHoverFor) {
+                  $x.classList.add('-highlighted-start');
+                } else {
+                  $x.classList.remove('-highlighted-start');
+                }
+              });
+            }
+          }
+        });
+      });
+
+      $contentViewChild.addEventListener('mouseout', () => {
+        $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {
+          $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');
+        });
+      });
+    });
   }
 
   private updateActiveMenuItem(label?: string) {

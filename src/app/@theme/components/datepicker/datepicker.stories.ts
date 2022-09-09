@@ -6,6 +6,7 @@ import { DatepickerComponent } from './datepicker.component';
 import { CommonModule } from '@angular/common';
 import { ThemeModule } from '../../theme.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -13,24 +14,25 @@ export default {
   component: DatepickerComponent,
   decorators: [
     moduleMetadata({
-      imports: [CommonModule, ThemeModule, BrowserAnimationsModule],
+      imports: [CommonModule, ThemeModule, BrowserAnimationsModule, ReactiveFormsModule],
     }),
     componentWrapperDecorator(story => `<label for="default" class="form-label">Label</label>${story}`),
   ],
   parameters: {
-    controls: { include: ['showPredefinedRanges', 'selectionMode'] }
+    controls: { include: ['showPredefinedRanges', 'selectionMode', 'clearable'] },
   },
   argTypes: {
     selectionMode: {
       options: ['single', 'range'],
       control: { type: 'radio' },
     },
+    changed: { action: 'changed' }
   },
 } as Meta;
 
 // More on component templates: https://storybook.js.org/docs/angular/writing-stories/introduction#using-args
 const Template: Story<DatepickerComponent> = (args: DatepickerComponent) => ({
-  props: {...args, ...{ inputId: 'default'}},
+  props: {...args, ...{ inputId: 'default', control: new FormControl() }},
 });
 
 export const Default = Template.bind({});

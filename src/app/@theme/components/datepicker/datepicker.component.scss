@@ -169,7 +169,7 @@
   grid-column: span 3;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 1em;
   border-top: 1px solid $gray-300;
 }
@@ -184,5 +184,10 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  &.-clear {
+    margin-right: auto;
+    margin-left: -.25em;
   }
 }

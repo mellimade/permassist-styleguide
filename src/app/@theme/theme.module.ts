@@ -5,6 +5,7 @@ import { CalendarModule } from 'primeng/calendar';
 import { MenuModule } from 'primeng/menu';
 
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,12 +14,14 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
   imports: [
     CommonModule,
     CalendarModule,
-    MenuModule
+    MenuModule,
+    ReactiveFormsModule
   ],
   exports: [
     DatepickerComponent,
     CalendarModule,
-    MenuModule
+    MenuModule,
+    ReactiveFormsModule
   ]
 })
 export class ThemeModule { }
