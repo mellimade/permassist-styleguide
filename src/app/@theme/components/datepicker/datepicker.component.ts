@@ -1,8 +1,10 @@
 import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { MenuItem } from 'primeng/api';
 import { Calendar } from 'primeng/calendar';
 import { Menu } from 'primeng/menu';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { daysAgo, monthsAgo } from 'src/app/@helpers/dates';
 import { getParentsOf, waitUntilExistsFrom } from 'src/app/@helpers/utilities';
 
@@ -11,7 +13,7 @@ function multiplyDayDependingOnGroup(day: number, $day: HTMLElement) {
 
   if (!$group) return day;
 
-  return day + (32 * Array.from($group.parentNode.children).indexOf($group));
+  return day + (32 * Array.from($group.parentNode!.children).indexOf($group));
 }
 
 export const DATEPICKER_RANGES = {
@@ -56,6 +58,7 @@ export const DATEPICKER_RANGES = {
 export class DatepickerComponent {
   @Input() showPredefinedRanges = true;
   @Input() inputId = '';
+  @Input() formControl!: FormControl;
 
   @Input()
   set selectionMode(selectionMode: string) {
@@ -93,7 +96,7 @@ export class DatepickerComponent {
 
     if (this.selectionMode === 'range') {
       waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {
-        let $showHoverFor: HTMLElement;
+        let $showHoverFor: HTMLElement | null;
         let showHoverFor: number;
 
         this.updateActiveMenuItemOnOpen();
@@ -183,7 +186,7 @@ export class DatepickerComponent {
     this.updateActiveMenuItem(item.label);
   }
 
-  private updateActiveMenuItem(label: string) {
+  private updateActiveMenuItem(label?: string) {
     const $range = this.$predefinedRangesMenu?.el?.nativeElement?.querySelectorAll('.p-menuitem-link') || [];
     let foundMatch = false;
 
