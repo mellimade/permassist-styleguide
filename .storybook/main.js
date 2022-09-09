@@ -8,6 +8,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
+    "./addons/changelog/preset.js",
     "./addons/google-tag-manager/preset.js"
   ],
   "framework": "@storybook/angular",

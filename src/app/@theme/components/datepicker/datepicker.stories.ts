@@ -2,11 +2,13 @@
 import { Story, Meta } from '@storybook/angular/types-6-0';
 import { componentWrapperDecorator, moduleMetadata } from '@storybook/angular';
 
-import { DatepickerComponent } from './datepicker.component';
 import { CommonModule } from '@angular/common';
 import { ThemeModule } from '../../theme.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+
+import { DatepickerComponent } from './datepicker.component';
+
 
 // More on default export: https://storybook.js.org/docs/angular/writing-stories/introduction#default-export
 export default {
@@ -20,6 +22,13 @@ export default {
   ],
   parameters: {
     controls: { include: ['showPredefinedRanges', 'selectionMode', 'clearable'] },
+    changelog: `
+## September 10, 2022
+- Added: Ability to clear input from pop-up
+- Fixed: Range hover should now work after a month change
+- Other: Downgraded from Angular 14 to 12
+- Other: Works with strict typing
+`
   },
   argTypes: {
     selectionMode: {
