@@ -153,15 +153,15 @@ export class DatepickerComponent {
   private addRangeInteractions() {
     if (this.selectionMode !== 'range') return;
 
-    waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then($contentViewChild => {
+    waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then(($contentViewChild: Element) => {
       let $showHoverFor: HTMLElement | null;
       let showHoverFor: number;
 
       this.updateActiveMenuItemOnOpen();
 
-      $contentViewChild.querySelectorAll('table td > span').forEach(($date: HTMLElement) => {
+      $contentViewChild.querySelectorAll('table td > span').forEach(($date: Element) => {
         $date.addEventListener('click', () => {
-          const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)');
+          const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)') as unknown as HTMLElement[];
 
           if ($highlighted?.length === 1) {
             $showHoverFor = $highlighted[0].parentNode as HTMLElement;
@@ -169,7 +169,7 @@ export class DatepickerComponent {
           } else {
             showHoverFor = 0;
             $showHoverFor = null;
-            $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {
+            $contentViewChild.querySelectorAll('table td').forEach(($x: Element) => {
               $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');
             });
           }
@@ -180,8 +180,8 @@ export class DatepickerComponent {
             const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));
 
             if (current > showHoverFor) {
-              $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: HTMLElement) => {
-                const day = multiplyDayDependingOnGroup(Number($x.textContent), $x);
+              $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: Element) => {
+                const day = multiplyDayDependingOnGroup(Number($x.textContent), $x as HTMLElement);
 
                 if (current > showHoverFor && day < current && day > showHoverFor) {
                   $x.classList.add('-highlighted');
@@ -207,7 +207,7 @@ export class DatepickerComponent {
       });
 
       $contentViewChild.addEventListener('mouseout', () => {
-        $contentViewChild.querySelectorAll('table td').forEach(($x: HTMLElement) => {
+        $contentViewChild.querySelectorAll('table td').forEach(($x: Element) => {
           $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');
         });
       });
