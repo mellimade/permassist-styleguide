@@ -1,0 +1,29 @@
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year:enabled:hover, .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month:enabled:hover {
+  color: $primary-600;
+  text-decoration: underline;
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-year,
+.p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {
+  padding: 0.5rem;
+  display: inline-block;
+}
+
+.p-datepicker:not(.p-datepicker-inline) {
+  box-shadow: $box-shadow;
+  border-left-width: 0;
+  border-right-width: 0;
+  border-bottom-width: 0;
+
+  .p-datepicker-header {
+    background-color: transparent;
+  }
+}
+
+.p-datepicker .p-datepicker-header .p-datepicker-title {
+  line-height: 2rem;
+}
+
+.p-datepicker table td > span {
+  border-radius: 50%;
+}

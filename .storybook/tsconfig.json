@@ -1,5 +1,5 @@
 {
-  "extends": "../tsconfig.app.json",
+  "extends": "../projects/permassist-ui/tsconfig.lib.json",
   "compilerOptions": {
     "types": [
       "node"
@@ -7,12 +7,10 @@
     "allowSyntheticDefaultImports": true
   },
   "exclude": [
-    "../src/test.ts",
-    "../src/**/*.spec.ts",
     "../projects/**/*.spec.ts"
   ],
   "include": [
-    "../src/**/*",
+    "../stories/**/*",
     "../projects/**/*"
   ],
   "files": [

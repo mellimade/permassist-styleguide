@@ -1,27 +1,37 @@
-# PermassistStyleguide
+# PermAssist Interactive Style Guide
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2. It was downgraded to Angular 12.2.16
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+## Technologies
+- CSS
+  - SCSS pre-processor
+  - Bootstrap 5
+- Javascript
+  - Angular 12
+  - NG Prime
+  - Typescript and ES6
+  - Storybook
 
-## Development server
+## Use as a library (recommended)
+This project has been made as an Angular library. 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Install the library
+To include it in your project, do the follow:
+1. Copy **lib** directory into the root of your Angular project.
+2. In your applications, use `import { PermassistUIModule } from 'lib/permassist-ui';` to include the module and its components.
+3. In your angular.json, make sure to change projects.<project>.architect.builder.build.styles array to include `lib/permassist-ui/styles/styles.scss`. If key does not exist, simply add it.
 
-## Code scaffolding
+### Updating the library
+If you would like to update library from source, do the following:
+1. Run `npm run build`
+2. Copy **lib** directory into the root of your Angular project.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+[More information](https://angular.io/guide/creating-libraries#using-your-own-library-in-applications)
 
-## Build
+## Use as part of your application
+If you are planning to modify the components, you can simply copy the code into your application.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Copying the Angular components
+The code for the Angular components can be copied from: `projects/permassist-ui/src/lib`
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Copying the styles
+The code for the styles can be copied from `projects/permassist-ui/styles`. It is highly recommended to not edit the original files however, as SCSS uses inheritance and overrides by default. It is preferred to overrides styles instead.

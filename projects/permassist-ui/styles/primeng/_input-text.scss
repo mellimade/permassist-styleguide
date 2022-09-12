@@ -1,0 +1,12 @@
+.p-inputtext {
+  background-color: $gray-100;
+  border-color: $gray-300;
+  color: $black;
+  padding: .75rem;
+
+  &:enabled:hover,
+  &:enabled:focus {
+    border-color: $primary-600;
+    box-shadow: 0 0 0 1px $primary-600;
+  }
+}
