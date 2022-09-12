@@ -3,9 +3,9 @@
   "version": "1.1.0",
   "scripts": {
     "build": "ng build",
+    "build-storybook": "npm run docs:json && build-storybook",
     "docs:json": "compodoc -p ./tsconfig.json -e json -d .",
     "storybook": "npm run docs:json && start-storybook -p 6006",
-    "storybook:build": "npm run docs:json && build-storybook",
     "chromatic": "npx chromatic --project-token=75eb71997686"
   },
   "private": true,
