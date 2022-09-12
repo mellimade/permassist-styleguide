@@ -1,0 +1,27 @@
+{
+  "name": "permassist-ui",
+  "version": "0.0.1",
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^12.2.16",
+    "@angular/core": "^12.2.16",
+    "@angular/forms": "^12.2.16",
+    "bootstrap": "^5.2.0",
+    "primeicons": "^5.0.0",
+    "primeng": "^12.2.3"
+  },
+  "exports": {
+    ".": {
+      "sass": "./styles/styles.scss"
+    }
+  },
+  "main": "bundles/permassist-ui.umd.js",
+  "module": "fesm2015/permassist-ui.js",
+  "es2015": "fesm2015/permassist-ui.js",
+  "esm2015": "esm2015/permassist-ui.js",
+  "fesm2015": "fesm2015/permassist-ui.js",
+  "typings": "permassist-ui.d.ts",
+  "sideEffects": false
+}

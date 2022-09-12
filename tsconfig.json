@@ -22,10 +22,15 @@
       "dom"
     ],
     "paths": {
-      "@helpers/*": ["app/@helpers/*"],
-      "@theme/*": ["app/@theme/*"],
       "@env": ["environments/environment"],
-      "@app/*": ["app/*"]
+      "@ui": [
+        "lib/permassist-ui/permassist-ui",
+        "lib/permassist-ui"
+      ],
+      "permassist-ui": [
+        "lib/permassist-ui/permassist-ui",
+        "lib/permassist-ui"
+      ]
     },
   },
   "angularCompilerOptions": {
