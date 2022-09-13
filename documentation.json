@@ -9,7 +9,7 @@
     "components": [
         {
             "name": "DatepickerComponent",
-            "id": "component-DatepickerComponent-97cc175e58ef37eb407b9786a19f24b88ce0711f0802aaff67afe59ad30a9c46ce8ecc056d278addb76333770d836a5dc5229ed09cd5472ca651755b1d86326e",
+            "id": "component-DatepickerComponent-e4ea9bfe2e29cfdc583de9f14884ea0282987c7f63ebd870ced5c5fc8a28584bf5cbeb32b7576d3a749c9a107393b6b174d78ce9dc5f7f6dfcf53bf3ba9d600e",
             "file": "projects/permassist-ui/src/lib/components/datepicker/datepicker.component.ts",
             "changeDetection": "ChangeDetectionStrategy.OnPush",
             "encapsulation": [],
@@ -46,7 +46,16 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 68,
+                    "line": 69,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 70,
                     "type": "string",
                     "decorators": []
                 },
@@ -55,7 +64,7 @@
                     "defaultValue": "[\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n  ]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 79,
+                    "line": 92,
                     "type": "MenuItem[]",
                     "decorators": []
                 },
@@ -63,7 +72,7 @@
                     "name": "selectionMode",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 71,
+                    "line": 73,
                     "type": "string",
                     "decorators": []
                 },
@@ -74,6 +83,14 @@
                     "deprecationMessage": "",
                     "line": 66,
                     "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "value",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 82,
+                    "type": "Date | [] | null",
                     "decorators": []
                 }
             ],
@@ -86,7 +103,7 @@
                     "type": "Calendar",
                     "optional": false,
                     "description": "",
-                    "line": 88,
+                    "line": 101,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -101,7 +118,7 @@
                     "type": "Menu",
                     "optional": false,
                     "description": "",
-                    "line": 89,
+                    "line": 102,
                     "decorators": [
                         {
                             "name": "ViewChild",
@@ -117,7 +134,7 @@
                     "type": "Observable<number>",
                     "optional": false,
                     "description": "",
-                    "line": 97
+                    "line": 110
                 },
                 {
                     "name": "selectionMode$",
@@ -127,7 +144,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 95
+                    "line": 108
                 },
                 {
                     "name": "selectionMode$$",
@@ -137,7 +154,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 94,
+                    "line": 107,
                     "modifierKind": [
                         121,
                         144
@@ -151,7 +168,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 92
+                    "line": 105
                 },
                 {
                     "name": "showing$$",
@@ -161,7 +178,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 91,
+                    "line": 104,
                     "modifierKind": [
                         121,
                         144
@@ -175,7 +192,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 179,
+                    "line": 192,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -195,7 +212,7 @@
                     "optional": false,
                     "returnType": "number",
                     "typeParameters": [],
-                    "line": 174,
+                    "line": 187,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -216,7 +233,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 140,
+                    "line": 153,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -226,7 +243,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 136,
+                    "line": 149,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -236,7 +253,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 128,
+                    "line": 141,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -246,7 +263,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 123,
+                    "line": 136,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -256,7 +273,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 132,
+                    "line": 145,
                     "deprecated": false,
                     "deprecationMessage": ""
                 },
@@ -273,7 +290,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 105,
+                    "line": 118,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -301,7 +318,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 111,
+                    "line": 124,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -329,7 +346,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 117,
+                    "line": 130,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -364,7 +381,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 149,
+                    "line": 162,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -403,7 +420,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 243,
+                    "line": 256,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -428,7 +445,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 261,
+                    "line": 274,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "modifierKind": [
@@ -448,7 +465,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 99,
+                    "line": 112,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -471,11 +488,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { ChangeDetectionStrategy, Component, forwardRef, Input, ViewChild } from '@angular/core';\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';\nimport { MenuItem } from 'primeng/api';\nimport { Calendar } from 'primeng/calendar';\nimport { Menu } from 'primeng/menu';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { map } from 'rxjs/operators';\nimport { daysAgo, monthsAgo } from '../../@helpers/dates';\nimport { getParentsOf, waitUntilExistsFrom } from '../../@helpers/utilities';\n\nfunction multiplyDayDependingOnGroup(day: number, $day: HTMLElement) {\n  const $group = getParentsOf($day, '.p-datepicker-group')?.[0];\n\n  if (!$group) return day;\n\n  return day + (32 * Array.from($group.parentNode!.children).indexOf($group));\n}\n\nexport const DATEPICKER_RANGES = {\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}\n\n@Component({\n  selector: 'pa-ui-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => DatepickerComponent),\n      multi: true,\n    },\n  ],\n})\nexport class DatepickerComponent implements ControlValueAccessor {\n  @Input() showPredefinedRanges = true;\n  @Input() clearable = true;\n  @Input() inputId = '';\n\n  @Input()\n  set selectionMode(selectionMode: string) {\n    this.selectionMode$$.next(selectionMode);\n  }\n\n  get selectionMode(): string {\n    return this.selectionMode$$.value;\n  }\n\n  @Input() predefinedRanges: MenuItem[] = [\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n  ];\n\n  @ViewChild('calendar') $calendar!: Calendar;\n  @ViewChild('predefinedRangesMenu') $predefinedRangesMenu!: Menu;\n\n  private readonly showing$$ = new BehaviorSubject(false);\n  showing$ = this.showing$$.asObservable();\n\n  private readonly selectionMode$$ = new BehaviorSubject('single');\n  selectionMode$ = this.selectionMode$$.asObservable();\n\n  numberOfMonths$: Observable<number> = this.selectionMode$.pipe(map(x => x === 'range' ? 2 : 1));\n\n  writeValue(value: unknown): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.writeValue(value);\n    });\n  }\n\n  registerOnChange(fn: never): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.registerOnChange(fn);\n    });\n  }\n\n  registerOnTouched(fn: never): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.registerOnTouched(fn);\n    });\n  }\n\n  setDisabledState(isDisabled: boolean): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.setDisabledState(isDisabled);\n    });\n  }\n\n  onOpen() {\n    this.showing$$.next(true);\n    this.addRangeInteractions();\n  }\n\n  onMonthChange() {\n    this.addRangeInteractions();\n  }\n\n  onYearChange() {\n    this.addRangeInteractions();\n  }\n\n  onClose() {\n    this.showing$$.next(false);\n  }\n\n  clear() {\n    this.$calendar?.updateModel(null);\n    // this.control?.patchValue(null);\n\n    if (this.selectionMode === 'single') {\n      this.$calendar?.toggle();\n    }\n  }\n\n  setRange(item: MenuItem, e?: Event) {\n    const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n    if (range) {\n      if (this.selectionMode === 'range') {\n        this.$calendar.updateModel([]);\n\n        range.range.forEach(date => {\n          this.$calendar.onDateSelect(e, {\n            year: date.getFullYear(),\n            month: date.getMonth(),\n            day: date.getUTCDate(),\n            selectable: true\n          });\n        });\n\n        this.$calendar.updateUI();\n      } else {\n        this.$calendar.updateModel(range.single);\n      }\n    }\n\n    this.updateActiveMenuItem(item.label);\n  }\n\n  asNumber(x: unknown) {\n    if (!x) return 0;\n    return x as number;\n  }\n\n  private addRangeInteractions() {\n    if (this.selectionMode !== 'range') return;\n\n    waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then(($contentViewChild: Element) => {\n      let $showHoverFor: HTMLElement | null;\n      let showHoverFor: number;\n\n      this.updateActiveMenuItemOnOpen();\n\n      $contentViewChild.querySelectorAll('table td > span').forEach(($date: Element) => {\n        $date.addEventListener('click', () => {\n          const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)') as unknown as HTMLElement[];\n\n          if ($highlighted?.length === 1) {\n            $showHoverFor = $highlighted[0].parentNode as HTMLElement;\n            showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);\n          } else {\n            showHoverFor = 0;\n            $showHoverFor = null;\n            $contentViewChild.querySelectorAll('table td').forEach(($x: Element) => {\n              $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n            });\n          }\n        });\n\n        $date.addEventListener('mouseover', e => {\n          if (showHoverFor) {\n            const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));\n\n            if (current > showHoverFor) {\n              $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: Element) => {\n                const day = multiplyDayDependingOnGroup(Number($x.textContent), $x as HTMLElement);\n\n                if (current > showHoverFor && day < current && day > showHoverFor) {\n                  $x.classList.add('-highlighted');\n                } else {\n                  $x.classList.remove('-highlighted');\n                }\n\n                if (day === current) {\n                  $x.classList.add('-highlighted-end');\n                } else {\n                  $x.classList.remove('-highlighted-end');\n                }\n\n                if (day === showHoverFor) {\n                  $x.classList.add('-highlighted-start');\n                } else {\n                  $x.classList.remove('-highlighted-start');\n                }\n              });\n            }\n          }\n        });\n      });\n\n      $contentViewChild.addEventListener('mouseout', () => {\n        $contentViewChild.querySelectorAll('table td').forEach(($x: Element) => {\n          $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n        });\n      });\n    });\n  }\n\n  private updateActiveMenuItem(label?: string) {\n    const $range = this.$predefinedRangesMenu?.el?.nativeElement?.querySelectorAll('.p-menuitem-link') || [];\n    let foundMatch = false;\n\n    $range.forEach(($link: HTMLElement) => {\n      if ($link.textContent === label) {\n        $link.classList.add('-active');\n        foundMatch = true;\n      } else {\n        $link.classList.remove('-active');\n      }\n    });\n\n    if (!foundMatch && $range.length) {\n      ($range[$range.length - 1] as HTMLElement).classList.add('-active');\n    }\n  }\n\n  private updateActiveMenuItemOnOpen() {\n    this.predefinedRanges.forEach(item => {\n      const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n      if (this.selectionMode === 'range') {\n        if (range && this.$calendar.value?.[0] === range.range[0] && this.$calendar.value?.[1] === range.range[1]) {\n          this.updateActiveMenuItem(item.label);\n        }\n      } else {\n        if (range && this.$calendar.value === range.single) {\n          this.updateActiveMenuItem(item.label);\n        }\n      }\n    });\n  }\n}\n",
+            "sourceCode": "import { ChangeDetectionStrategy, Component, forwardRef, Input, ViewChild } from '@angular/core';\nimport { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';\nimport { MenuItem } from 'primeng/api';\nimport { Calendar } from 'primeng/calendar';\nimport { Menu } from 'primeng/menu';\nimport { BehaviorSubject, Observable } from 'rxjs';\nimport { map } from 'rxjs/operators';\nimport { daysAgo, monthsAgo } from '../../@helpers/dates';\nimport { getParentsOf, waitUntilExistsFrom } from '../../@helpers/utilities';\n\nfunction multiplyDayDependingOnGroup(day: number, $day: HTMLElement) {\n  const $group = getParentsOf($day, '.p-datepicker-group')?.[0];\n\n  if (!$group) return day;\n\n  return day + (32 * Array.from($group.parentNode!.children).indexOf($group));\n}\n\nexport const DATEPICKER_RANGES = {\n  Today: {\n    label: 'Today',\n    range: [new Date(), new Date()],\n    single: new Date(),\n  },\n  Yesterday: {\n    label: 'Yesterday',\n    range: [daysAgo(1), daysAgo(1)],\n    single: daysAgo(1),\n  },\n  Last7Days: {\n    label: 'Last 7 Days',\n    range: [daysAgo(7), new Date()],\n    single: daysAgo(7),\n  },\n  Last30Days: {\n    label: 'Last 30 Days',\n    range: [daysAgo(30), new Date()],\n    single: daysAgo(30),\n  },\n  ThisMonth: {\n    label: 'This Month',\n    range: [daysAgo(-1, monthsAgo(0, 1)), daysAgo(-1, monthsAgo(0, 0))],\n    single: monthsAgo(0, 1),\n  },\n  LastMonth: {\n    label: 'Last Month',\n    range: [daysAgo(-1, monthsAgo(1, 1)), daysAgo(0, monthsAgo(0, 0))],\n    single: monthsAgo(1, 1),\n  },\n}\n\n@Component({\n  selector: 'pa-ui-datepicker',\n  templateUrl: './datepicker.component.html',\n  styleUrls: ['./datepicker.component.scss'],\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  providers: [\n    {\n      provide: NG_VALUE_ACCESSOR,\n      useExisting: forwardRef(() => DatepickerComponent),\n      multi: true,\n    },\n  ],\n})\nexport class DatepickerComponent implements ControlValueAccessor {\n  @Input() showPredefinedRanges = true;\n  @Input() clearable = true;\n\n  @Input() inputId = '';\n  @Input() placeholder = '';\n\n  @Input()\n  set selectionMode(selectionMode: string) {\n    this.selectionMode$$.next(selectionMode);\n  }\n\n  get selectionMode(): string {\n    return this.selectionMode$$.value;\n  }\n\n  @Input()\n  set value(value: Date | Date[] | null){\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.writeValue(value);\n    });\n  }\n\n  get value() {\n    return this.$calendar.value;\n  }\n\n  @Input() predefinedRanges: MenuItem[] = [\n    { label: DATEPICKER_RANGES.Today.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Yesterday.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last7Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.Last30Days.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.ThisMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n    { label: DATEPICKER_RANGES.LastMonth.label, command: e => this.setRange(e.item, e.originalEvent) },\n  ];\n\n  @ViewChild('calendar') $calendar!: Calendar;\n  @ViewChild('predefinedRangesMenu') $predefinedRangesMenu!: Menu;\n\n  private readonly showing$$ = new BehaviorSubject(false);\n  showing$ = this.showing$$.asObservable();\n\n  private readonly selectionMode$$ = new BehaviorSubject('single');\n  selectionMode$ = this.selectionMode$$.asObservable();\n\n  numberOfMonths$: Observable<number> = this.selectionMode$.pipe(map(x => x === 'range' ? 2 : 1));\n\n  writeValue(value: unknown): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.writeValue(value);\n    });\n  }\n\n  registerOnChange(fn: never): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.registerOnChange(fn);\n    });\n  }\n\n  registerOnTouched(fn: never): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.registerOnTouched(fn);\n    });\n  }\n\n  setDisabledState(isDisabled: boolean): void {\n    waitUntilExistsFrom(() => this.$calendar, 20, 50).then($calendar => {\n      $calendar.setDisabledState(isDisabled);\n    });\n  }\n\n  onOpen() {\n    this.showing$$.next(true);\n    this.addRangeInteractions();\n  }\n\n  onMonthChange() {\n    this.addRangeInteractions();\n  }\n\n  onYearChange() {\n    this.addRangeInteractions();\n  }\n\n  onClose() {\n    this.showing$$.next(false);\n  }\n\n  clear() {\n    this.$calendar?.updateModel(null);\n    this.$calendar?.updateInputfield();\n\n    if (this.selectionMode === 'single') {\n      this.$calendar?.toggle();\n    }\n  }\n\n  setRange(item: MenuItem, e?: Event) {\n    const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n    if (range) {\n      if (this.selectionMode === 'range') {\n        this.$calendar.updateModel([]);\n\n        range.range.forEach(date => {\n          this.$calendar.onDateSelect(e, {\n            year: date.getFullYear(),\n            month: date.getMonth(),\n            day: date.getUTCDate(),\n            selectable: true\n          });\n        });\n\n        this.$calendar.updateUI();\n      } else {\n        this.$calendar.updateModel(range.single);\n      }\n    }\n\n    this.updateActiveMenuItem(item.label);\n  }\n\n  asNumber(x: unknown) {\n    if (!x) return 0;\n    return x as number;\n  }\n\n  private addRangeInteractions() {\n    if (this.selectionMode !== 'range') return;\n\n    waitUntilExistsFrom(() => this.$calendar.contentViewChild?.nativeElement).then(($contentViewChild: Element) => {\n      let $showHoverFor: HTMLElement | null;\n      let showHoverFor: number;\n\n      this.updateActiveMenuItemOnOpen();\n\n      $contentViewChild.querySelectorAll('table td > span').forEach(($date: Element) => {\n        $date.addEventListener('click', () => {\n          const $highlighted: HTMLElement[] = $contentViewChild.querySelectorAll('table td span.p-highlight:not(.p-disabled)') as unknown as HTMLElement[];\n\n          if ($highlighted?.length === 1) {\n            $showHoverFor = $highlighted[0].parentNode as HTMLElement;\n            showHoverFor = multiplyDayDependingOnGroup(Number($highlighted[0].textContent), $showHoverFor);\n          } else {\n            showHoverFor = 0;\n            $showHoverFor = null;\n            $contentViewChild.querySelectorAll('table td').forEach(($x: Element) => {\n              $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n            });\n          }\n        });\n\n        $date.addEventListener('mouseover', e => {\n          if (showHoverFor) {\n            const current = multiplyDayDependingOnGroup(Number((e.target as HTMLElement).textContent), (e.target as HTMLElement));\n\n            if (current > showHoverFor) {\n              $contentViewChild.querySelectorAll('table td:not(.p-datepicker-other-month)').forEach(($x: Element) => {\n                const day = multiplyDayDependingOnGroup(Number($x.textContent), $x as HTMLElement);\n\n                if (current > showHoverFor && day < current && day > showHoverFor) {\n                  $x.classList.add('-highlighted');\n                } else {\n                  $x.classList.remove('-highlighted');\n                }\n\n                if (day === current) {\n                  $x.classList.add('-highlighted-end');\n                } else {\n                  $x.classList.remove('-highlighted-end');\n                }\n\n                if (day === showHoverFor) {\n                  $x.classList.add('-highlighted-start');\n                } else {\n                  $x.classList.remove('-highlighted-start');\n                }\n              });\n            }\n          }\n        });\n      });\n\n      $contentViewChild.addEventListener('mouseout', () => {\n        $contentViewChild.querySelectorAll('table td').forEach(($x: Element) => {\n          $x.classList.remove('-highlighted', '-highlighted-start', '-highlighted-end');\n        });\n      });\n    });\n  }\n\n  private updateActiveMenuItem(label?: string) {\n    const $range = this.$predefinedRangesMenu?.el?.nativeElement?.querySelectorAll('.p-menuitem-link') || [];\n    let foundMatch = false;\n\n    $range.forEach(($link: HTMLElement) => {\n      if ($link.textContent === label) {\n        $link.classList.add('-active');\n        foundMatch = true;\n      } else {\n        $link.classList.remove('-active');\n      }\n    });\n\n    if (!foundMatch && $range.length) {\n      ($range[$range.length - 1] as HTMLElement).classList.add('-active');\n    }\n  }\n\n  private updateActiveMenuItemOnOpen() {\n    this.predefinedRanges.forEach(item => {\n      const range = Object.values(DATEPICKER_RANGES).find(x => x.label === item.label);\n\n      if (this.selectionMode === 'range') {\n        if (range && this.$calendar.value?.[0] === range.range[0] && this.$calendar.value?.[1] === range.range[1]) {\n          this.updateActiveMenuItem(item.label);\n        }\n      } else {\n        if (range && this.$calendar.value === range.single) {\n          this.updateActiveMenuItem(item.label);\n        }\n      }\n    });\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "@import 'variables';\n\n.datepicker {\n  display: block;\n}\n\n::ng-deep .datepicker {\n  .p-inputtext {\n    min-width: 265px;\n  }\n\n  .p-calendar:after {\n    content: $icon-calendar;\n    font-family: $font-family-icons;\n    position: absolute;\n    top: .5em;\n    right: .5em;\n    font-size: 1.3em;\n    color: $primary-500;\n    cursor: pointer;\n    pointer-events: none;\n  }\n\n  .p-calendar .p-datepicker {\n    top: calc(100% - 1px) !important;\n    right: 0;\n    font-size: $font-size-sm;\n    padding-top: 0;\n\n    &.p-datepicker-multiple-month {\n      right: auto;\n    }\n  }\n\n  .p-datepicker .p-datepicker-header {\n    border-bottom: none;\n    padding-bottom: 0;\n    padding-top: 0;\n    margin-bottom: -0.75em;\n  }\n\n  .p-link, .p-component, .p-datepicker table {\n    font-size: inherit;\n  }\n\n  .p-datepicker {\n    padding: 0;\n  }\n\n  .p-datepicker table th {\n    text-align: center;\n    font-weight: $font-weight-semibold;\n  }\n\n  .p-datepicker table th,\n  .p-datepicker table td {\n    padding: .25em .1em;\n\n    > span {\n      width: 2em;\n      height: 2em;\n    }\n  }\n\n  .p-datepicker table td.p-datepicker-today > span {\n    background-color: $primary-200;\n  }\n\n  .p-datepicker table td > span.p-highlight,\n  .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {\n    color: $white;\n    background-color: $primary-600;\n    font-weight: $font-weight-medium;\n  }\n\n  .p-datepicker table td.-highlighted,\n  .p-datepicker table td.-highlighted-start,\n  .p-datepicker table td.-highlighted-end {\n    position: relative;\n\n    &:before {\n      content: '';\n      position: absolute;\n      top: .25em;\n      left: 0;\n      right: 0;\n      bottom: .25em;\n      background-color: $primary-250;\n      z-index: -1;\n    }\n  }\n\n  .p-datepicker table td.-highlighted-start:before {\n    left: 50%;\n  }\n\n  .p-datepicker table td.-highlighted-end:before {\n    right: 50%;\n  }\n\n  &.-showing {\n    .p-inputtext {\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n      border-color: $primary-600;\n      box-shadow: 0 0 0 1px $primary-600;\n    }\n\n    .p-inputtext + .p-datepicker {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n      border-top: 2px solid $primary-600;\n    }\n  }\n\n  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {\n    margin-right: 0;\n  }\n\n  .p-datepicker .p-datepicker-header .p-datepicker-prev,\n  .p-datepicker .p-datepicker-header .p-datepicker-next {\n    width: 1.5em;\n    height: 1.5em;\n  }\n\n  .p-datepicker.-has-ranges.p-datepicker-multiple-month {\n    display: inline-grid;\n    grid-template-columns: 1fr 1fr;\n    max-width: 100vw;\n    overflow-x: auto;\n\n    .p-datepicker-group {\n      padding-right: .5em;\n    }\n  }\n}\n\n::ng-deep .datepicker__predefined-ranges {\n  .p-menu {\n    border: none;\n    border-radius: 0;\n    border-right: 1px solid $gray-300;\n    background-color: $gray-100;\n    font-size: $font-size-sm;\n    width: auto;\n    min-width: 150px;\n    margin-right: .25em;\n    height: 100%;\n    padding-top: .5em;\n\n    .p-menuitem-link {\n      padding: 0.7em 1em;\n      padding-right: 2em;\n      color: $primary-600;\n      font-weight: $font-weight-medium;\n\n      .p-menuitem-text {\n        color: inherit;\n      }\n\n      &.-active {\n        background-color: $primary-250;\n      }\n    }\n  }\n}\n\n.datepicker__actions {\n  grid-column: span 3;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 1em;\n  border-top: 1px solid $gray-300;\n}\n\n.datepicker__btn {\n  margin-left: .25em;\n  font-weight: $font-weight-medium;\n\n  &.btn-link {\n    text-decoration: none;\n\n    &:hover {\n      text-decoration: underline;\n    }\n  }\n\n  &.-clear {\n    margin-right: auto;\n    margin-left: -.25em;\n  }\n}\n",
+                    "data": "@import 'variables';\n\n.datepicker {\n  display: block;\n}\n\n::ng-deep .datepicker {\n  .p-inputtext {\n    min-width: 265px;\n  }\n\n  .p-calendar:after {\n    content: $-icon-calendar;\n    font-family: $-font-family-icons;\n    position: absolute;\n    top: .5em;\n    right: .5em;\n    font-size: 1.3em;\n    color: $-primary-500;\n    cursor: pointer;\n    pointer-events: none;\n  }\n\n  .p-calendar .p-datepicker {\n    top: calc(100% - 1px) !important;\n    right: 0;\n    font-size: $-font-size-sm;\n    padding-top: 0;\n\n    &.p-datepicker-multiple-month {\n      right: auto;\n    }\n  }\n\n  .p-datepicker .p-datepicker-header {\n    border-bottom: none;\n    padding-bottom: 0;\n    padding-top: 0;\n    margin-bottom: -0.75em;\n  }\n\n  .p-link, .p-component, .p-datepicker table {\n    font-size: inherit;\n  }\n\n  .p-datepicker {\n    padding: 0;\n  }\n\n  .p-datepicker table th {\n    text-align: center;\n    font-weight: $-font-weight-semibold;\n  }\n\n  .p-datepicker table th,\n  .p-datepicker table td {\n    padding: .25em .1em;\n\n    > span {\n      width: 2em;\n      height: 2em;\n    }\n  }\n\n  .p-datepicker table td.p-datepicker-today > span {\n    background-color: $-primary-200;\n  }\n\n  .p-datepicker table td > span.p-highlight,\n  .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {\n    color: $-white;\n    background-color: $-primary-600;\n    font-weight: $-font-weight-medium;\n  }\n\n  .p-datepicker table td.-highlighted,\n  .p-datepicker table td.-highlighted-start,\n  .p-datepicker table td.-highlighted-end {\n    position: relative;\n\n    &:before {\n      content: '';\n      position: absolute;\n      top: .25em;\n      left: 0;\n      right: 0;\n      bottom: .25em;\n      background-color: $-primary-250;\n      z-index: -1;\n    }\n  }\n\n  .p-datepicker table td.-highlighted-start:before {\n    left: 50%;\n  }\n\n  .p-datepicker table td.-highlighted-end:before {\n    right: 50%;\n  }\n\n  &.-showing {\n    .p-inputtext {\n      border-bottom-left-radius: 0;\n      border-bottom-right-radius: 0;\n      border-color: $-primary-600;\n      box-shadow: 0 0 0 1px $-primary-600;\n    }\n\n    .p-inputtext + .p-datepicker {\n      border-top-left-radius: 0;\n      border-top-right-radius: 0;\n      border-top: 2px solid $-primary-600;\n    }\n  }\n\n  .p-datepicker .p-datepicker-header .p-datepicker-title .p-datepicker-month {\n    margin-right: 0;\n  }\n\n  .p-datepicker .p-datepicker-header .p-datepicker-prev,\n  .p-datepicker .p-datepicker-header .p-datepicker-next {\n    width: 1.5em;\n    height: 1.5em;\n  }\n\n  .p-datepicker.-has-ranges.p-datepicker-multiple-month {\n    display: inline-grid;\n    grid-template-columns: 1fr 1fr;\n    max-width: 100vw;\n    overflow-x: auto;\n\n    .p-datepicker-group {\n      padding-right: .5em;\n    }\n  }\n}\n\n::ng-deep .datepicker__predefined-ranges {\n  .p-menu {\n    border: none;\n    border-radius: 0;\n    border-right: 1px solid $-gray-300;\n    background-color: $-gray-100;\n    font-size: $-font-size-sm;\n    width: auto;\n    min-width: 150px;\n    margin-right: .25em;\n    height: 100%;\n    padding-top: .5em;\n\n    .p-menuitem-link {\n      padding: 0.7em 1em;\n      padding-right: 2em;\n      color: $-primary-600;\n      font-weight: $-font-weight-medium;\n\n      .p-menuitem-text {\n        color: inherit;\n      }\n\n      &.-active {\n        background-color: $-primary-250;\n      }\n    }\n  }\n}\n\n.datepicker__actions {\n  grid-column: span 3;\n  display: flex;\n  align-items: center;\n  justify-content: flex-end;\n  padding: 1em;\n  border-top: 1px solid $-gray-300;\n}\n\n.datepicker__btn {\n  margin-left: .25em;\n  font-weight: $-font-weight-medium;\n\n  &.btn-link {\n    text-decoration: none;\n\n    &:hover {\n      text-decoration: underline;\n    }\n  }\n\n  &.-clear {\n    margin-right: auto;\n    margin-left: -.25em;\n  }\n}\n",
                     "styleUrl": "./datepicker.component.scss"
                 }
             ],
@@ -500,7 +517,7 @@
                             }
                         ],
                         "returnType": "void",
-                        "line": 71,
+                        "line": 73,
                         "jsdoctags": [
                             {
                                 "name": "selectionMode",
@@ -517,11 +534,47 @@
                         "name": "selectionMode",
                         "type": "string",
                         "returnType": "string",
-                        "line": 75
+                        "line": 77
+                    }
+                },
+                "value": {
+                    "name": "value",
+                    "setSignature": {
+                        "name": "value",
+                        "type": "void",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "args": [
+                            {
+                                "name": "value",
+                                "type": "Date | Date[] | null",
+                                "deprecated": false,
+                                "deprecationMessage": ""
+                            }
+                        ],
+                        "returnType": "void",
+                        "line": 82,
+                        "jsdoctags": [
+                            {
+                                "name": "value",
+                                "type": "Date | Date[] | null",
+                                "deprecated": false,
+                                "deprecationMessage": "",
+                                "tagName": {
+                                    "text": "param"
+                                }
+                            }
+                        ]
+                    },
+                    "getSignature": {
+                        "name": "value",
+                        "type": "",
+                        "returnType": "",
+                        "line": 88
                     }
                 }
             },
-            "templateData": "<p-calendar #calendar class=\"datepicker -{{ selectionMode }}\" [class.-showing]=\"showing$ | async\" [inputId]=\"inputId\" [selectionMode]=\"selectionMode\" (onShow)=\"onOpen()\" (onMonthChange)=\"onMonthChange()\" (onYearChange)=\"onYearChange()\" (onClose)=\"onClose()\" [numberOfMonths]=\"asNumber(numberOfMonths$ | async)\" panelStyleClass=\"{{ showPredefinedRanges ? '-has-ranges' : '' }}\"  dateFormat=\"dd/mm/yy\" (onInput)=\"writeValue($event)\" (onSelect)=\"writeValue($event)\">\n  <ng-template pTemplate=\"header\">\n    <ng-container [ngTemplateOutlet]=\"header\"></ng-container>\n  </ng-template>\n\n  <ng-template pTemplate=\"footer\">\n    <ng-container [ngTemplateOutlet]=\"footer\"></ng-container>\n  </ng-template>\n</p-calendar>\n\n<ng-template #header>\n  <p-menu #predefinedRangesMenu class=\"datepicker__predefined-ranges\" *ngIf=\"showPredefinedRanges && selectionMode === 'range'\" [model]=\"predefinedRanges\"></p-menu>\n</ng-template>\n\n<ng-template #footer>\n  <div class=\"datepicker__actions\">\n    <button type=\"button\" (click)=\"$calendar.toggle()\" class=\"btn btn-primary btn-sm datepicker__btn order-2\">Close</button>\n    <button *ngIf=\"clearable\" type=\"button\" (click)=\"clear()\" class=\"btn btn-link btn-sm datepicker__btn -clear order-1\">Clear</button>\n  </div>\n</ng-template>\n"
+            "templateData": "<p-calendar #calendar class=\"datepicker -{{ selectionMode }}\" [class.-showing]=\"showing$ | async\" [inputId]=\"inputId\" [selectionMode]=\"selectionMode\" (onShow)=\"onOpen()\" (onMonthChange)=\"onMonthChange()\" (onYearChange)=\"onYearChange()\" (onClose)=\"onClose()\" [numberOfMonths]=\"asNumber(numberOfMonths$ | async)\" panelStyleClass=\"-pa-ui {{ showPredefinedRanges ? '-has-ranges' : '' }}\"  dateFormat=\"dd/mm/yy\">\n  <ng-template pTemplate=\"header\">\n    <ng-container [ngTemplateOutlet]=\"header\"></ng-container>\n  </ng-template>\n\n  <ng-template pTemplate=\"footer\">\n    <ng-container [ngTemplateOutlet]=\"footer\"></ng-container>\n  </ng-template>\n</p-calendar>\n\n<ng-template #header>\n  <p-menu #predefinedRangesMenu class=\"datepicker__predefined-ranges\" *ngIf=\"showPredefinedRanges && selectionMode === 'range'\" [model]=\"predefinedRanges\"></p-menu>\n</ng-template>\n\n<ng-template #footer>\n  <div class=\"datepicker__actions\">\n    <button type=\"button\" (click)=\"$calendar.toggle()\" class=\"btn btn-primary btn-sm datepicker__btn order-2\">Close</button>\n    <button *ngIf=\"clearable\" type=\"button\" (click)=\"clear()\" class=\"btn btn-link btn-sm datepicker__btn -clear order-1\">Clear</button>\n  </div>\n</ng-template>\n"
         }
     ],
     "modules": [
@@ -629,7 +682,7 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story<DatepickerComponent>",
-                "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default', formControl: new FormControl(new Date()) }},\n})"
+                "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default' }},\n})"
             }
         ],
         "functions": [
@@ -1158,7 +1211,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story<DatepickerComponent>",
-                    "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default', formControl: new FormControl(new Date()) }},\n})"
+                    "defaultValue": "(args: DatepickerComponent) => ({\n  props: {...args, ...{ inputId: 'default' }},\n})"
                 }
             ]
         },
@@ -1723,7 +1776,7 @@
                 "linktype": "component",
                 "name": "DatepickerComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/27",
+                "coverageCount": "0/29",
                 "status": "low"
             },
             {

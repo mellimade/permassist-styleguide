@@ -18,7 +18,7 @@ This project has been made as an Angular library.
 To include it in your project, do the follow:
 1. Copy **lib** directory into the root of your Angular project.
 2. In your applications, use `import { PermassistUIModule } from 'lib/permassist-ui';` to include the module and its components.
-3. In your angular.json, make sure to change projects.<project>.architect.builder.build.styles array to include `lib/permassist-ui/styles/styles.scss`. If key does not exist, simply add it.
+3. In your angular.json, make sure to change projects.<project>.architect.builder.build.styles array to include `lib/permassist-ui/styles/lib-styles.scss`. If key does not exist, simply add it.
 
 ### Updating the library
 If you would like to update library from source, do the following:

@@ -40,6 +40,7 @@ export declare class DatepickerComponent implements ControlValueAccessor {
     showPredefinedRanges: boolean;
     clearable: boolean;
     inputId: string;
+    placeholder: string;
     set selectionMode(selectionMode: string);
     get selectionMode(): string;
     set value(value: Date | Date[] | null);
@@ -67,5 +68,5 @@ export declare class DatepickerComponent implements ControlValueAccessor {
     private updateActiveMenuItem;
     private updateActiveMenuItemOnOpen;
     static ɵfac: i0.ɵɵFactoryDeclaration<DatepickerComponent, never>;
-    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerComponent, "pa-ui-datepicker", never, { "showPredefinedRanges": "showPredefinedRanges"; "clearable": "clearable"; "inputId": "inputId"; "selectionMode": "selectionMode"; "value": "value"; "predefinedRanges": "predefinedRanges"; }, {}, never, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<DatepickerComponent, "pa-ui-datepicker", never, { "showPredefinedRanges": "showPredefinedRanges"; "clearable": "clearable"; "inputId": "inputId"; "placeholder": "placeholder"; "selectionMode": "selectionMode"; "value": "value"; "predefinedRanges": "predefinedRanges"; }, {}, never, never>;
 }

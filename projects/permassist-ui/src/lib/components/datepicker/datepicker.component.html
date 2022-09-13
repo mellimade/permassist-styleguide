@@ -1,4 +1,4 @@
-<p-calendar #calendar class="datepicker -{{ selectionMode }}" [class.-showing]="showing$ | async" [inputId]="inputId" [selectionMode]="selectionMode" (onShow)="onOpen()" (onMonthChange)="onMonthChange()" (onYearChange)="onYearChange()" (onClose)="onClose()" [numberOfMonths]="asNumber(numberOfMonths$ | async)" panelStyleClass="{{ showPredefinedRanges ? '-has-ranges' : '' }}"  dateFormat="dd/mm/yy">
+<p-calendar #calendar class="datepicker -{{ selectionMode }} -pa-ui" [class.-showing]="showing$ | async" [inputId]="inputId" [selectionMode]="selectionMode" (onShow)="onOpen()" (onMonthChange)="onMonthChange()" (onYearChange)="onYearChange()" (onClose)="onClose()" [numberOfMonths]="asNumber(numberOfMonths$ | async)" panelStyleClass="-pa-ui {{ showPredefinedRanges ? '-has-ranges' : '' }}"  dateFormat="dd/mm/yy" [placeholder]="placeholder">
   <ng-template pTemplate="header">
     <ng-container [ngTemplateOutlet]="header"></ng-container>
   </ng-template>

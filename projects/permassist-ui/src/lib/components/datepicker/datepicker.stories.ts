@@ -19,8 +19,12 @@ export default {
     componentWrapperDecorator(story => `<label for="default" class="form-label">Label</label>${story}`),
   ],
   parameters: {
-    controls: { include: ['showPredefinedRanges', 'selectionMode', 'clearable'] },
+    controls: { include: ['showPredefinedRanges', 'selectionMode', 'clearable', 'placeholder'] },
     changelog: `
+## September 14, 2022
+- Added: Placeholder support
+- Other: Styles are now namespaced to .-pa-ui
+
 ## September 13, 2022
 - Added: Supports form control
 

@@ -1,0 +1,20 @@
+.-pa-ui {
+  --bs-primary: #{$-primary};
+
+  .btn-primary {
+    --bs-btn-bg: #{$-primary};
+    --bs-btn-border-color: #{$-primary};
+    --bs-btn-hover-bg: #{darken($-primary, 5%)};
+    --bs-btn-hover-border-color: #{darken($-primary, 5%)};
+    --bs-btn-active-bg: #{darken($-primary, 5%)};
+    --bs-btn-active-border-color: #{darken($-primary, 5%)};
+    --bs-btn-disabled-bg: #{$-gray-500};
+    --bs-btn-disabled-border-color: #{$-gray-500};
+  }
+
+  .btn-link {
+    --bs-btn-color: #{$-primary};
+    --bs-btn-hover-color: #{darken($-primary, 5%)};
+    --bs-btn-active-color: #{darken($-primary, 5%)};
+  }
+}

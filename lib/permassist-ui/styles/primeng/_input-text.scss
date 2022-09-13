@@ -1,12 +1,18 @@
-.p-inputtext {
-  background-color: $gray-100;
-  border-color: $gray-300;
-  color: $black;
+.-pa-ui.p-inputtext,
+.-pa-ui .p-inputtext {
+  background-color: $-gray-100;
+  border-color: $-gray-300;
+  color: $-black;
   padding: .75rem;
 
   &:enabled:hover,
   &:enabled:focus {
-    border-color: $primary-600;
-    box-shadow: 0 0 0 1px $primary-600;
+    border-color: $-primary-600;
+    box-shadow: 0 0 0 1px $-primary-600;
+  }
+
+  &::placeholder {
+    color: $-gray-500;
+    font-weight: $-font-weight-light;
   }
 }

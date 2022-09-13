@@ -10,13 +10,13 @@
   }
 
   .p-calendar:after {
-    content: $icon-calendar;
-    font-family: $font-family-icons;
+    content: $-icon-calendar;
+    font-family: $-font-family-icons;
     position: absolute;
     top: .5em;
     right: .5em;
     font-size: 1.3em;
-    color: $primary-500;
+    color: $-primary-500;
     cursor: pointer;
     pointer-events: none;
   }
@@ -24,7 +24,7 @@
   .p-calendar .p-datepicker {
     top: calc(100% - 1px) !important;
     right: 0;
-    font-size: $font-size-sm;
+    font-size: $-font-size-sm;
     padding-top: 0;
 
     &.p-datepicker-multiple-month {
@@ -49,7 +49,7 @@
 
   .p-datepicker table th {
     text-align: center;
-    font-weight: $font-weight-semibold;
+    font-weight: $-font-weight-semibold;
   }
 
   .p-datepicker table th,
@@ -63,14 +63,14 @@
   }
 
   .p-datepicker table td.p-datepicker-today > span {
-    background-color: $primary-200;
+    background-color: $-primary-200;
   }
 
   .p-datepicker table td > span.p-highlight,
   .p-datepicker:not(.p-disabled) table td span:not(.p-highlight):not(.p-disabled):hover {
-    color: $white;
-    background-color: $primary-600;
-    font-weight: $font-weight-medium;
+    color: $-white;
+    background-color: $-primary-600;
+    font-weight: $-font-weight-medium;
   }
 
   .p-datepicker table td.-highlighted,
@@ -85,7 +85,7 @@
       left: 0;
       right: 0;
       bottom: .25em;
-      background-color: $primary-250;
+      background-color: $-primary-250;
       z-index: -1;
     }
   }
@@ -102,14 +102,14 @@
     .p-inputtext {
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
-      border-color: $primary-600;
-      box-shadow: 0 0 0 1px $primary-600;
+      border-color: $-primary-600;
+      box-shadow: 0 0 0 1px $-primary-600;
     }
 
     .p-inputtext + .p-datepicker {
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      border-top: 2px solid $primary-600;
+      border-top: 2px solid $-primary-600;
     }
   }
 
@@ -139,9 +139,9 @@
   .p-menu {
     border: none;
     border-radius: 0;
-    border-right: 1px solid $gray-300;
-    background-color: $gray-100;
-    font-size: $font-size-sm;
+    border-right: 1px solid $-gray-300;
+    background-color: $-gray-100;
+    font-size: $-font-size-sm;
     width: auto;
     min-width: 150px;
     margin-right: .25em;
@@ -151,15 +151,15 @@
     .p-menuitem-link {
       padding: 0.7em 1em;
       padding-right: 2em;
-      color: $primary-600;
-      font-weight: $font-weight-medium;
+      color: $-primary-600;
+      font-weight: $-font-weight-medium;
 
       .p-menuitem-text {
         color: inherit;
       }
 
       &.-active {
-        background-color: $primary-250;
+        background-color: $-primary-250;
       }
     }
   }
@@ -171,12 +171,12 @@
   align-items: center;
   justify-content: flex-end;
   padding: 1em;
-  border-top: 1px solid $gray-300;
+  border-top: 1px solid $-gray-300;
 }
 
 .datepicker__btn {
   margin-left: .25em;
-  font-weight: $font-weight-medium;
+  font-weight: $-font-weight-medium;
 
   &.btn-link {
     text-decoration: none;

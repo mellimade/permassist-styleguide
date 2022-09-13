@@ -65,7 +65,9 @@ export const DATEPICKER_RANGES = {
 export class DatepickerComponent implements ControlValueAccessor {
   @Input() showPredefinedRanges = true;
   @Input() clearable = true;
+
   @Input() inputId = '';
+  @Input() placeholder = '';
 
   @Input()
   set selectionMode(selectionMode: string) {
